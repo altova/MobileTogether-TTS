@@ -1,0 +1,2591 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MobileTogetherDesign versionClient="55" versionServer="55" deploymentPath_so="/public/TTS Parcel Delivery" deploymentDescription_so="Tracking solution for a delivery business using geo-location data with Text-to-Speech enhancements." deploymentGlobalResourceConfig_so="Default">
+	<DesignRoot id="1" isNeedsTextToSpeech="1">
+		<style workflowIcon="Parcel Delivery.png"/>
+		<children>
+			<DesignPage id="2">
+				<style autoAddSubmitButton="0" backgroundColor_x="$EnforceBackgroundColor" name="Configuration" pageTitle="Configuration"/>
+				<children>
+					<DesignTable id="84">
+						<style name="Table1"/>
+						<children>
+							<DesignTableCol id="85">
+								<style colWidth="wrap_content"/>
+							</DesignTableCol>
+							<DesignTableCol id="86"/>
+							<DesignTableRow id="87">
+								<children>
+									<DesignLabel id="81">
+										<style name="Label1" text="Select driver: "/>
+										<localization so="1">
+											<children>
+												<LocLangData lang="de">
+													<style text="Fahrer auswählen: "/>
+												</LocLangData>
+												<LocLangData lang="ja">
+													<style text="運転手を選択する:"/>
+												</LocLangData>
+												<LocLangData lang="es">
+													<style text="Elegir conductor:"/>
+												</LocLangData>
+												<LocLangData lang="fr">
+													<style text="Choisir conducteur : "/>
+												</LocLangData>
+											</children>
+										</localization>
+									</DesignLabel>
+									<DesignCombo id="83" pageXML="92" comboEntryFromList="0" xpath="$TODO/Todo/Driver/@name">
+										<style autoCorrectValue="1" name="Combo Box1"/>
+									</DesignCombo>
+								</children>
+							</DesignTableRow>
+						</children>
+					</DesignTable>
+					<DesignLabel id="95">
+						<style multiLine="1" name="Label2" text="Each driver gets his/her route for deliveries within New York City. Using Geolocation information retrieved from your device you can see how you proceed from one point to another." textSize="small"/>
+						<localization so="1">
+							<children>
+								<LocLangData lang="de">
+									<style text="Jeder Fahrer/Jede Fahrerin erhält seine/ihre Route für Zustellungen in New York City. Mit Hilfe der von Ihrem Gerät abgerufenen Standortinformationen sehen Sie, wie Sie von einem Punkt zum nächsten gelangen."/>
+								</LocLangData>
+								<LocLangData lang="ja">
+									<style text="各運転手にはニューヨーク市内の配達ルートが与えられます。デバイスから取得された位置情報を使用して、ある場所から次の場所への道順を確認することができます。"/>
+								</LocLangData>
+								<LocLangData lang="es">
+									<style text="Cada conductor tiene su propia ruta para los repartos en la ciudad de Nueva York. Usando la información de geolocalización que se recupera en su dispositivo podrá ver cómo podrá dirigirse de un punto a otro."/>
+								</LocLangData>
+								<LocLangData lang="fr">
+									<style text="Chaque conducteur reçoit son trajet de livraison à New York. En utilisant les informations de géolocalisation depuis votre appareil, vous pouvez voir comment aller d&apos;une destination à l&apos;autre."/>
+								</LocLangData>
+							</children>
+						</localization>
+					</DesignLabel>
+					<DesignVSpace id="97">
+						<style name="Space1" spaceHeight="10px"/>
+					</DesignVSpace>
+					<DesignTable id="104">
+						<style name="Table2"/>
+						<children>
+							<DesignTableCol id="105">
+								<style colWidth="wrap_content"/>
+							</DesignTableCol>
+							<DesignTableCol id="106"/>
+							<DesignTableCol id="107"/>
+							<DesignTableRow id="108">
+								<children>
+									<DesignLabel id="99">
+										<style name="Label3" text="Display units: "/>
+										<localization so="1">
+											<children>
+												<LocLangData lang="de">
+													<style text="Einheiten: "/>
+												</LocLangData>
+												<LocLangData lang="ja">
+													<style text="配達の単位:"/>
+												</LocLangData>
+												<LocLangData lang="es">
+													<style text="Unidades:"/>
+												</LocLangData>
+												<LocLangData lang="fr">
+													<style text="Voir unités : "/>
+												</LocLangData>
+											</children>
+										</localization>
+									</DesignLabel>
+									<DesignRadioButton id="34108" pageXML="110" checkedValues="I">
+										<style cbRight="0" name="Radio Button1" text="Imperial"/>
+										<localization so="1">
+											<children>
+												<LocLangData lang="de">
+													<style text="US/GB"/>
+												</LocLangData>
+												<LocLangData lang="ja">
+													<style text="帝国単位"/>
+												</LocLangData>
+												<LocLangData lang="es">
+													<style text="US/GB"/>
+												</LocLangData>
+												<LocLangData lang="fr">
+													<style text="Impérial"/>
+												</LocLangData>
+											</children>
+										</localization>
+									</DesignRadioButton>
+									<DesignRadioButton id="34110" pageXML="110" checkedValues="M">
+										<style cbRight="0" name="Radio Button2" text="Metric"/>
+										<localization so="1">
+											<children>
+												<LocLangData lang="de">
+													<style text="Metrische"/>
+												</LocLangData>
+												<LocLangData lang="ja">
+													<style text="メートル法"/>
+												</LocLangData>
+												<LocLangData lang="es">
+													<style text="Métrico"/>
+												</LocLangData>
+												<LocLangData lang="fr">
+													<style text="Métrique"/>
+												</LocLangData>
+											</children>
+										</localization>
+									</DesignRadioButton>
+								</children>
+							</DesignTableRow>
+						</children>
+					</DesignTable>
+					<DesignLabel id="111">
+						<style multiLine="1" name="Label4" text="You can choose how to display distance between you and the next location, weight and dimensions of the parcels" textSize="small"/>
+						<localization so="1">
+							<children>
+								<LocLangData lang="de">
+									<style text="Sie können auswählen, wie die Entfernung zwischen Ihrem Standort und dem nächsten Ziel, Gewicht und Größe des Pakets angezeigt werden sollen."/>
+								</LocLangData>
+								<LocLangData lang="ja">
+									<style text="現在の位置から次の場所の距離、荷物の重さと寸法の表示を選択することができます。"/>
+								</LocLangData>
+								<LocLangData lang="es">
+									<style text="Puede elegir cómo mostrar la distancia desde donde usted se encuentra a la  siguiente ubicación, el peso y las dimensiones de los envíos."/>
+								</LocLangData>
+								<LocLangData lang="fr">
+									<style text="Vous pouvez choisir comment afficher la distance entre votre emplacement et la destination suivantes, ainsi que le poids et les dimensions des paquets."/>
+								</LocLangData>
+							</children>
+						</localization>
+					</DesignLabel>
+					<DesignVSpace id="113">
+						<style name="Space2" spaceHeight="10px"/>
+					</DesignVSpace>
+					<DesignTable id="197">
+						<style name="Table3"/>
+						<children>
+							<DesignTableCol id="198">
+								<style colWidth_x="if ( $MT_CanvasX &lt; 500 )
+then &apos;fill_parent&apos;
+else &apos;wrap_content&apos;"/>
+							</DesignTableCol>
+							<DesignTableCol id="199">
+								<style colWidth="wrap_content"/>
+							</DesignTableCol>
+							<DesignTableRow id="200">
+								<children>
+									<DesignLabel id="201">
+										<style multiLine="1" name="Label5" text="Update your location: "/>
+										<localization so="1">
+											<children>
+												<LocLangData lang="de">
+													<style text="Standort aktualisieren "/>
+												</LocLangData>
+												<LocLangData lang="ja">
+													<style text="現在位置の更新:"/>
+												</LocLangData>
+												<LocLangData lang="es">
+													<style text="Actualizar ubicación:"/>
+												</LocLangData>
+												<LocLangData lang="fr">
+													<style text="Mettre votre emplacement à jour : "/>
+												</LocLangData>
+											</children>
+										</localization>
+									</DesignLabel>
+									<DesignCombo id="203" pageXML="207" comboEntryFromList="0" comboEntryVisValues="1" xpath="$Intervals, 0" xpathValues="$Intervals ! ( if ( . = 1 ) then mt-load-string( &apos;Every second&apos; ) else mt-load-string( &apos;Every N seconds&apos; ) =&gt; format-string( . ) ),
+mt-load-string( &apos;Manually&apos; )">
+										<style autoCorrectValue="1" name="Combo Box2"/>
+									</DesignCombo>
+								</children>
+							</DesignTableRow>
+						</children>
+					</DesignTable>
+					<DesignLabel id="34015">
+						<style multiLine="1" name="Label6" text="This application uses Geolocation capabilities of your device. Select how often your location information should be updated when driving to your delivery destinations." textSize="small"/>
+						<localization so="1">
+							<children>
+								<LocLangData lang="de">
+									<style text="Diese App verwendet die Standortfunktionen Ihres Geräts. Wählen Sie aus, wie oft Ihre Standortinformationen auf der Fahrt zu Ihren Zustelladressen aktualisiert werden sollen."/>
+								</LocLangData>
+								<LocLangData lang="ja">
+									<style text="このアプリケーションはデバイスの位置情報機能を使用します。配達目的地まで運転する際、何度位置情報が更新されるか選択してください。"/>
+								</LocLangData>
+								<LocLangData lang="es">
+									<style text="Esta aplicación utiliza la función de ubicación de su dispositivo. Seleccione la frecuencia con la se debería actualizar la información de su ubicación cuando se diriga a sus destinos de entrega."/>
+								</LocLangData>
+								<LocLangData lang="fr">
+									<style text="Cette application utilise les fonctions de géolocalisation de votre appareil. Sélectionnez la fréquence d&apos;actualisation de vos informations d&apos;emplacement pendant votre trajet de livraison."/>
+								</LocLangData>
+							</children>
+						</localization>
+					</DesignLabel>
+					<DesignVSpace id="221">
+						<style name="Space3" spaceHeight="10px"/>
+					</DesignVSpace>
+					<DesignTable id="34343">
+						<style name="Table4"/>
+						<children>
+							<DesignTableCol id="34344">
+								<style colWidth_x="if ( $MT_CanvasX &lt; 500 )
+then &apos;fill_parent&apos;
+else &apos;wrap_content&apos;"/>
+							</DesignTableCol>
+							<DesignTableCol id="34378"/>
+							<DesignTableRow id="34346">
+								<children>
+									<DesignLabel id="34347">
+										<style multiLine="1" name="Label7" text="Speak during delivery: "/>
+										<localization so="1">
+											<children>
+												<LocLangData lang="de">
+													<style text="Standort aktualisieren "/>
+												</LocLangData>
+												<LocLangData lang="ja">
+													<style text="現在位置の更新:"/>
+												</LocLangData>
+												<LocLangData lang="es">
+													<style text="Actualizar ubicación:"/>
+												</LocLangData>
+												<LocLangData lang="fr">
+													<style text="Mettre votre emplacement à jour : "/>
+												</LocLangData>
+											</children>
+										</localization>
+									</DesignLabel>
+									<DesignSwitch id="34381" pageXML="34393">
+										<style name="Switch1" toggleOffText="No" toggleOnText="Yes"/>
+									</DesignSwitch>
+								</children>
+							</DesignTableRow>
+						</children>
+					</DesignTable>
+					<DesignLabel id="34351">
+						<style multiLine="1" name="Label8" text="This application can use Text-to-Speech capabilities of your device. Works best when Geolocation Update interval is 15 seconds or greater." textSize="small"/>
+						<localization so="1">
+							<children>
+								<LocLangData lang="de">
+									<style text="Diese App verwendet die Standortfunktionen Ihres Geräts. Wählen Sie aus, wie oft Ihre Standortinformationen auf der Fahrt zu Ihren Zustelladressen aktualisiert werden sollen."/>
+								</LocLangData>
+								<LocLangData lang="ja">
+									<style text="このアプリケーションはデバイスの位置情報機能を使用します。配達目的地まで運転する際、何度位置情報が更新されるか選択してください。"/>
+								</LocLangData>
+								<LocLangData lang="es">
+									<style text="Esta aplicación utiliza la función de ubicación de su dispositivo. Seleccione la frecuencia con la se debería actualizar la información de su ubicación cuando se diriga a sus destinos de entrega."/>
+								</LocLangData>
+								<LocLangData lang="fr">
+									<style text="Cette application utilise les fonctions de géolocalisation de votre appareil. Sélectionnez la fréquence d&apos;actualisation de vos informations d&apos;emplacement pendant votre trajet de livraison."/>
+								</LocLangData>
+							</children>
+						</localization>
+					</DesignLabel>
+					<DesignVSpace id="34376">
+						<style name="Space4" spaceHeight="10px"/>
+					</DesignVSpace>
+					<DesignButton id="34364">
+						<style name="Button1" text="View my todo"/>
+						<localization so="1">
+							<children>
+								<LocLangData lang="de">
+									<style text="To-do-Liste anzeigen"/>
+								</LocLangData>
+								<LocLangData lang="ja">
+									<style text="やることリストを見る"/>
+								</LocLangData>
+								<LocLangData lang="es">
+									<style text="Mostrar lista de repartos pendientes"/>
+								</LocLangData>
+								<LocLangData lang="fr">
+									<style text="Voir ma liste de tâches"/>
+								</LocLangData>
+							</children>
+						</localization>
+						<controlActions id="34365">
+							<children>
+								<DesignActionDeleteNode id="34368" needsClient="1" delAt="$USER/U/DeliverySummary/*"/>
+								<DesignActionDeleteNode id="34369" needsClient="1" delAt="$USER/U/RemainingPackages/*"/>
+								<DesignActionAppendNode id="34370" needsClient="1" appAt="$USER/U/RemainingPackages" resOf="$TODO/Todo/Driver[ @name = $USER/U/@Driver ]/Destination ! element package { string( @package ) }"/>
+								<DesignActionGotoSubpage id="34371" pageRef="33737"/>
+							</children>
+						</controlActions>
+					</DesignButton>
+				</children>
+				<localization so="1">
+					<children>
+						<LocLangData lang="de">
+							<style pageTitle="Konfiguration"/>
+						</LocLangData>
+						<LocLangData lang="es">
+							<style pageTitle="Configuración"/>
+						</LocLangData>
+						<LocLangData lang="ja">
+							<style pageTitle="構成"/>
+						</LocLangData>
+						<LocLangData lang="fr">
+							<style pageTitle="Configuration"/>
+						</LocLangData>
+					</children>
+				</localization>
+				<xmlRoots>
+					<PageXMLRootRef id="61" refXMLRoot="62"/>
+					<PageXMLRootRef id="89" refXMLRoot="90"/>
+				</xmlRoots>
+			</DesignPage>
+			<DesignPage id="33737" subPage="1">
+				<style name="Todo" pageTitle="Todo"/>
+				<children>
+					<DesignLabel id="33745">
+						<style align="center" multiLine="1" name="Label4" text_x="format-string(
+	mt-load-string( &apos;todo&apos; || IF( PartiallyFinishedDestinations(), &apos; remaining&apos; ) ),
+	count( RemainingDestinations() )
+)" textColor_x="IF( PartiallyFinishedDestinations(), $EmphasizedColor )" textSize="small"/>
+					</DesignLabel>
+					<DesignButton id="33897">
+						<style name="Button1" text_x="IF( PartiallyFinishedDestinations(), &apos;resume&apos;, &apos;start&apos; ) =&gt; mt-load-string()"/>
+						<controlActions id="33898">
+							<children>
+								<DesignActionGeolocationStartStop id="33899" needsClient="1" simulationfilename="&apos;SampleData\Driving Simulation &apos; || $USER/U/@Driver || &apos;.xml&apos;"/>
+								<DesignActionGotoSubpage id="33900" pageRef="118"/>
+								<DesignActionDeleteNode id="33950" needsClient="1" delAt="let $delivered-packages := $USER/U/DeliverySummary/Entry/@package/string()
+return $USER/U/RemainingPackages/package[ . = $delivered-packages ]"/>
+								<DesignActionCondition id="33909" needsClient="1" condition="$USER/U/DeliverySummary/has-children()">
+									<children>
+										<DesignActionConditionTrue id="33910">
+											<children>
+												<DesignActionGotoSubpage id="33911" pageRef="33638"/>
+											</children>
+										</DesignActionConditionTrue>
+									</children>
+								</DesignActionCondition>
+								<DesignActionGeolocationStartStop id="33902" start="0"/>
+								<DesignActionCondition id="33913" needsClient="1" condition="count( RemainingDestinations() ) = 0">
+									<children>
+										<DesignActionConditionTrue id="33914">
+											<children>
+												<DesignActionReturnFromSubpage id="33915"/>
+											</children>
+										</DesignActionConditionTrue>
+									</children>
+								</DesignActionCondition>
+							</children>
+						</controlActions>
+					</DesignButton>
+					<DesignTable id="33799">
+						<style name="Table1"/>
+						<children>
+							<DesignTableCol id="33800"/>
+							<DesignTableRowGroup id="33792">
+								<style addDelPossible="0" repeating="1" repeatingXPath_x="RemainingDestinations()"/>
+								<children>
+									<DesignTableRow id="33793">
+										<children>
+											<DesignTable id="33957">
+												<style name="Table2"/>
+												<children>
+													<DesignTableCol id="33958">
+														<style colWidth="wrap_content"/>
+													</DesignTableCol>
+													<DesignTableCol id="33959"/>
+													<DesignTableRow id="33960">
+														<children>
+															<DesignLabel id="33952">
+																<style name="Label5" text_x="@name || &apos;  &apos;" textColor_x="$EmphasizedColor"/>
+															</DesignLabel>
+															<DesignLabel id="33955">
+																<style name="Label6" text_x="@company"/>
+															</DesignLabel>
+														</children>
+													</DesignTableRow>
+												</children>
+											</DesignTable>
+										</children>
+									</DesignTableRow>
+									<DesignTableRow id="33796">
+										<children>
+											<DesignTable id="33819">
+												<style name="Table3"/>
+												<children>
+													<DesignTableCol id="33820">
+														<style colWidth="5%"/>
+													</DesignTableCol>
+													<DesignTableCol id="33821"/>
+													<DesignTableRow id="33822">
+														<children>
+															<DesignTableCellEmpty id="33823"/>
+															<DesignLabel id="33824">
+																<style multiLine="1" name="Label3" text_x="@address" textSize="small"/>
+															</DesignLabel>
+														</children>
+													</DesignTableRow>
+												</children>
+											</DesignTable>
+										</children>
+									</DesignTableRow>
+									<DesignTableRow id="33843">
+										<children>
+											<DesignHLine id="33844">
+												<style marginBottom="5px" marginTop="5px" name="Horizontal Line1" visible_x="not( . is RemainingDestinations()[ last() ] )"/>
+											</DesignHLine>
+										</children>
+									</DesignTableRow>
+								</children>
+							</DesignTableRowGroup>
+						</children>
+					</DesignTable>
+				</children>
+				<localization so="1">
+					<children>
+						<LocLangData lang="de">
+							<style pageTitle="To-do"/>
+						</LocLangData>
+						<LocLangData lang="es">
+							<style pageTitle="Repartos pendientes"/>
+						</LocLangData>
+						<LocLangData lang="ja">
+							<style pageTitle="すること"/>
+						</LocLangData>
+						<LocLangData lang="fr">
+							<style pageTitle="Tâches"/>
+						</LocLangData>
+					</children>
+				</localization>
+				<onBackButtonActions id="166">
+					<children>
+						<DesignActionCondition id="34086" needsClient="1" condition="PartiallyFinishedDestinations()">
+							<children>
+								<DesignActionConditionTrue id="34087">
+									<children>
+										<DesignActionMessageBox id="34088" needsClient="1" msgBoxKind="yesno" msgBoxMsg="format-string( mt-load-string( &apos;todo remaining&apos; ), count( RemainingDestinations() ) ) || NewLine( 2 ) || mt-load-string( &apos;sure&apos; )">
+											<children>
+												<DesignActionMessageBoxButton id="34089">
+													<children>
+														<DesignActionReturnFromSubpage id="34090"/>
+													</children>
+												</DesignActionMessageBoxButton>
+												<DesignActionMessageBoxButton id="34091"/>
+											</children>
+										</DesignActionMessageBox>
+									</children>
+								</DesignActionConditionTrue>
+								<DesignActionConditionFalse id="34092">
+									<children>
+										<DesignActionReturnFromSubpage id="34093"/>
+									</children>
+								</DesignActionConditionFalse>
+							</children>
+						</DesignActionCondition>
+					</children>
+				</onBackButtonActions>
+				<xmlRoots>
+					<PageXMLRootRef id="33747" refXMLRoot="62"/>
+					<PageXMLRootRef id="33748" refXMLRoot="90"/>
+				</xmlRoots>
+			</DesignPage>
+			<DesignPage id="118" subPage="1">
+				<style backgroundColor_x="$EnforceBackgroundColor" name="Delivery" pageTitle="Delivery"/>
+				<children>
+					<DesignTable id="284">
+						<style name="Table1"/>
+						<children>
+							<DesignTableCol id="285">
+								<style colWidth="wrap_content"/>
+							</DesignTableCol>
+							<DesignTableCol id="286">
+								<style colWidth="wrap_content"/>
+							</DesignTableCol>
+							<DesignTableCol id="290"/>
+							<DesignTableRow id="287">
+								<children>
+									<DesignLabel id="277">
+										<style name="Label5" text="There are " textSize="small"/>
+										<localization so="1">
+											<children>
+												<LocLangData lang="de">
+													<style text="Es bleibt/bleiben "/>
+												</LocLangData>
+												<LocLangData lang="ja">
+													<style text="目的地はあと "/>
+												</LocLangData>
+												<LocLangData lang="es">
+													<style text="Quedan "/>
+												</LocLangData>
+												<LocLangData lang="fr">
+													<style text="Il vous reste "/>
+												</LocLangData>
+											</children>
+										</localization>
+									</DesignLabel>
+									<DesignLabel id="282">
+										<style name="Label6" text_x="count( $USER/U/RemainingPackages/package ) - $USER/U/@NextDestination + 1" textColor_x="$EmphasizedColor" textSize="small"/>
+									</DesignLabel>
+									<DesignLabel id="288">
+										<style name="Label7" text=" destinations left" textSize="small"/>
+										<localization so="1">
+											<children>
+												<LocLangData lang="de">
+													<style text=" Zustelladresse(n)"/>
+												</LocLangData>
+												<LocLangData lang="ja">
+													<style text="つあります"/>
+												</LocLangData>
+												<LocLangData lang="es">
+													<style text="Direcciones de entrega"/>
+												</LocLangData>
+												<LocLangData lang="fr">
+													<style text=" destinations"/>
+												</LocLangData>
+											</children>
+										</localization>
+									</DesignLabel>
+								</children>
+							</DesignTableRow>
+						</children>
+					</DesignTable>
+					<DesignLabel id="159">
+						<style multiLine="1" name="Label1" text="Please drive to your next destination:
+(click the address to see it on the map)" textSize="small"/>
+						<localization so="1">
+							<children>
+								<LocLangData lang="de">
+									<style text="Fahren Sie bitte zu Ihrem nächsten Ziel:
+(Klicken Sie auf die Adresse, um sie auf der Karte zu sehen)"/>
+								</LocLangData>
+								<LocLangData lang="ja">
+									<style text="次の目的地まで運転してください。(地図で確認するには、アドレスをクリックしてください。)"/>
+								</LocLangData>
+								<LocLangData lang="es">
+									<style text="Diríjase a su siguiente destino:
+(haga clic en la dirección para verlo en el mapa)"/>
+								</LocLangData>
+								<LocLangData lang="fr">
+									<style text="Veuillez vous rendre à votre prochaine destination :
+(cliquer l&apos;adresse pour la voir sur la carte)"/>
+								</LocLangData>
+							</children>
+						</localization>
+					</DesignLabel>
+					<DesignTable id="179">
+						<style name="Table2"/>
+						<children>
+							<DesignTableCol id="180">
+								<style colWidth="10%"/>
+							</DesignTableCol>
+							<DesignTableCol id="181"/>
+							<DesignTableRow id="182">
+								<children>
+									<DesignTableCellEmpty id="178"/>
+									<DesignLabel id="176">
+										<style multiLine="1" name="Label2" text_x="CurrentDestination() ! (
+@company || &apos;
+&apos; || @address
+)" textColor_x="$EmphasizedColor"/>
+										<controlActions id="177">
+											<children>
+												<DesignActionShowGeolocationInMap id="184" needsClient="1" location="CurrentDestination()/@geo" label="CurrentDestination()/@company" zoom="17"/>
+											</children>
+										</controlActions>
+									</DesignLabel>
+								</children>
+							</DesignTableRow>
+						</children>
+					</DesignTable>
+					<DesignVSpace id="211">
+						<style name="Space1"/>
+					</DesignVSpace>
+					<DesignTable id="228">
+						<style name="Table3"/>
+						<children>
+							<DesignTableCol id="229"/>
+							<DesignTableCol id="230">
+								<style colWidth="wrap_content" visible_x="$USER/U/@GeoUpdateFrequency = 0"/>
+							</DesignTableCol>
+							<DesignTableRow id="231">
+								<children>
+									<DesignLabel id="209">
+										<style multiLine="1" name="Label3" text="Your current location:" textSize="small"/>
+										<localization so="1">
+											<children>
+												<LocLangData lang="de">
+													<style text="Ihr aktueller Standort:"/>
+												</LocLangData>
+												<LocLangData lang="ja">
+													<style text="現在の位置:"/>
+												</LocLangData>
+												<LocLangData lang="es">
+													<style text="Su ubicación actual:"/>
+												</LocLangData>
+												<LocLangData lang="fr">
+													<style text="Votre emplacement actuel :"/>
+												</LocLangData>
+											</children>
+										</localization>
+									</DesignLabel>
+									<DesignButton id="232">
+										<style name="Button1" text=" Update "/>
+										<localization so="1">
+											<children>
+												<LocLangData lang="de">
+													<style text=" Aktualisieren "/>
+												</LocLangData>
+												<LocLangData lang="ja">
+													<style text="更新"/>
+												</LocLangData>
+												<LocLangData lang="es">
+													<style text=" Actualizar"/>
+												</LocLangData>
+												<LocLangData lang="fr">
+													<style text=" Actualiser "/>
+												</LocLangData>
+											</children>
+										</localization>
+										<controlActions id="233">
+											<children>
+												<DesignActionGroupRef id="242" groupRef="241"/>
+												<DesignActionGroupRef id="34342" groupRef="34341"/>
+											</children>
+										</controlActions>
+									</DesignButton>
+								</children>
+							</DesignTableRow>
+						</children>
+					</DesignTable>
+					<DesignTable id="213">
+						<style name="Table4"/>
+						<children>
+							<DesignTableCol id="214">
+								<style colWidth="10%"/>
+							</DesignTableCol>
+							<DesignTableCol id="215"/>
+							<DesignTableRow id="216">
+								<children>
+									<DesignTableCellEmpty id="217"/>
+									<DesignLabel id="218">
+										<style multiLine="1" name="Label4" text_x="string-join( $MT_GEOLOCATION/Root/Address/AddressLine, &apos;, &apos; )"/>
+									</DesignLabel>
+								</children>
+							</DesignTableRow>
+							<DesignTableRow id="273">
+								<children>
+									<DesignTableCellEmpty id="274"/>
+									<DesignVSpace id="275">
+										<style name="Space2"/>
+									</DesignVSpace>
+								</children>
+							</DesignTableRow>
+							<DesignTableRow id="271">
+								<children>
+									<DesignTableCellEmpty id="272"/>
+									<DesignLabel id="269">
+										<style multiLine="1" name="Label8" text_x="DistanceFromDestination() ! format-string( mt-load-string( &apos;away&apos; ), ( ?df, ?u ) )"/>
+									</DesignLabel>
+								</children>
+							</DesignTableRow>
+						</children>
+					</DesignTable>
+					<DesignVSpace id="33324">
+						<style name="Space5"/>
+					</DesignVSpace>
+					<DesignTable id="33328">
+						<style name="Table5"/>
+						<children>
+							<DesignTableCol id="33329"/>
+							<DesignTableCol id="33330"/>
+							<DesignTableRow id="33331">
+								<style visible_x="not( Arrived() )"/>
+								<children>
+									<DesignLabel id="33326">
+										<style multiLine="1" name="Label9" text="When you&apos;ve arrived, please click this button:" textSize="small"/>
+										<localization so="1">
+											<children>
+												<LocLangData lang="de">
+													<style text="Klicken Sie bei Ihrer Ankunft bitte auf diese Schaltfläche:"/>
+												</LocLangData>
+												<LocLangData lang="ja">
+													<style text="到着したら、このボタンをクリックしてください:"/>
+												</LocLangData>
+												<LocLangData lang="es">
+													<style text="Cuando llegue a su destino, haga clic en el siguiente botón:"/>
+												</LocLangData>
+												<LocLangData lang="fr">
+													<style text="Une fois arrivé, veuillez cliquer sur cette touche :"/>
+												</LocLangData>
+											</children>
+										</localization>
+									</DesignLabel>
+									<DesignButton id="33332">
+										<style marginLeft="20px" multiLine="1" name="Button2" text="I&apos;m here!"/>
+										<localization so="1">
+											<children>
+												<LocLangData lang="de">
+													<style text="Angekommen"/>
+												</LocLangData>
+												<LocLangData lang="ja">
+													<style text="着きました!"/>
+												</LocLangData>
+												<LocLangData lang="es">
+													<style text="¡Llegó a su destino!"/>
+												</LocLangData>
+												<LocLangData lang="fr">
+													<style text="Vous êtes arrivé"/>
+												</LocLangData>
+											</children>
+										</localization>
+										<controlActions id="33333">
+											<children>
+												<DesignActionCondition id="33352" needsClient="1" condition="DistanceFromDestination() ?d &gt; 1">
+													<children>
+														<DesignActionConditionTrue id="33353">
+															<children>
+																<DesignActionMessageBox id="33354" needsClient="1" msgBoxKind="yesno" msgBoxMsg="format-string( mt-load-string( &apos;still away&apos; ), DistanceFromDestination() ! ( ?df, ?u ) ) || &apos;
+
+&apos; || mt-load-string( &apos;sure location&apos; )">
+																	<children>
+																		<DesignActionMessageBoxButton id="33355">
+																			<children>
+																				<DesignActionGroupRef id="33359" groupRef="33358"/>
+																			</children>
+																		</DesignActionMessageBoxButton>
+																		<DesignActionMessageBoxButton id="33356"/>
+																	</children>
+																</DesignActionMessageBox>
+															</children>
+														</DesignActionConditionTrue>
+														<DesignActionConditionFalse id="33361">
+															<children>
+																<DesignActionGroupRef id="33360" groupRef="33358"/>
+															</children>
+														</DesignActionConditionFalse>
+													</children>
+												</DesignActionCondition>
+											</children>
+										</controlActions>
+									</DesignButton>
+								</children>
+							</DesignTableRow>
+							<DesignTableRow id="34022">
+								<style visible_x="Arrived()"/>
+								<children>
+									<DesignLabel id="34020">
+										<style multiLine="1" name="Label11" text="You have arrived at your package drop location!" textColor_x="$EmphasizedColor" textSize="small"/>
+										<localization so="1">
+											<children>
+												<LocLangData lang="de">
+													<style text="Sie sind an der Zustelladresse angekommen!"/>
+												</LocLangData>
+												<LocLangData lang="ja">
+													<style text="荷物の配達地に到着しました。"/>
+												</LocLangData>
+												<LocLangData lang="es">
+													<style text="¡Ha llegado a su dirección de entrega!"/>
+												</LocLangData>
+												<LocLangData lang="fr">
+													<style text="Vous êtes arrivé à votre destination de livraison !"/>
+												</LocLangData>
+											</children>
+										</localization>
+									</DesignLabel>
+									<DesignButton id="34026">
+										<style marginLeft="20px" multiLine="1" name="Button4" text="Deliver"/>
+										<localization so="1">
+											<children>
+												<LocLangData lang="de">
+													<style text="Zustellen"/>
+												</LocLangData>
+												<LocLangData lang="ja">
+													<style text="配達"/>
+												</LocLangData>
+												<LocLangData lang="es">
+													<style text="Entregar"/>
+												</LocLangData>
+												<LocLangData lang="fr">
+													<style text="Livrer"/>
+												</LocLangData>
+											</children>
+										</localization>
+										<controlActions id="34027">
+											<children>
+												<DesignActionGroupRef id="34036" groupRef="33358"/>
+											</children>
+										</controlActions>
+									</DesignButton>
+								</children>
+							</DesignTableRow>
+						</children>
+					</DesignTable>
+					<DesignHLine id="33992">
+						<style name="Horizontal Line1" visible_x="not( IsLastDestination() )"/>
+					</DesignHLine>
+					<DesignTable id="33920">
+						<style name="Table6" visible_x="not( IsLastDestination() )"/>
+						<children>
+							<DesignTableCol id="33921"/>
+							<DesignTableCol id="33922"/>
+							<DesignTableRow id="33923">
+								<children>
+									<DesignLabel id="33924">
+										<style multiLine="1" name="Label10" text="When there is too much traffic, you may decide to skip current destination" textSize="small"/>
+										<localization so="1">
+											<children>
+												<LocLangData lang="de">
+													<style text="Bei zu hohem Verkehrsaufkommen können Sie das aktuelle Ziel überspringen"/>
+												</LocLangData>
+												<LocLangData lang="ja">
+													<style text="交通渋滞の場合、現在の目的地をスキップすることができます。"/>
+												</LocLangData>
+												<LocLangData lang="es">
+													<style text="Si hay demasiado tráfico, puede elegir saltarse el destino siguiente"/>
+												</LocLangData>
+												<LocLangData lang="fr">
+													<style text="Si la circulation est trop importante, vous pouvez décider de sauter la destination actuelle"/>
+												</LocLangData>
+											</children>
+										</localization>
+									</DesignLabel>
+									<DesignButton id="33926">
+										<style marginLeft="20px" multiLine="1" name="Button3" text="Proceed to Next!"/>
+										<localization so="1">
+											<children>
+												<LocLangData lang="de">
+													<style text="Weiter zum nächsten!"/>
+												</LocLangData>
+												<LocLangData lang="ja">
+													<style text="次を処理する!"/>
+												</LocLangData>
+												<LocLangData lang="es">
+													<style text="¡Continúe a su siguiente destino!"/>
+												</LocLangData>
+												<LocLangData lang="fr">
+													<style text="Au suivant !"/>
+												</LocLangData>
+											</children>
+										</localization>
+										<controlActions id="33927">
+											<children>
+												<DesignActionMessageBox id="33970" needsClient="1" msgBoxKind="yesno" msgBoxMsg="format-string(
+	mt-load-string( &apos;sure skip&apos; ),
+	(
+		NewLine( 2 ) || &apos;   &apos; || CurrentDestination() ! ( @company || &apos;, &apos; || @address ) || NewLine( 2 ),
+		NewLine( 2 ) || &apos;   &apos; || NextDestination()      ! ( @company || &apos;, &apos; || @address )
+	)
+)">
+													<children>
+														<DesignActionMessageBoxButton id="33971">
+															<children>
+																<DesignActionGroupRef id="33969" groupRef="33940"/>
+															</children>
+														</DesignActionMessageBoxButton>
+														<DesignActionMessageBoxButton id="33972"/>
+													</children>
+												</DesignActionMessageBox>
+											</children>
+										</controlActions>
+									</DesignButton>
+								</children>
+							</DesignTableRow>
+						</children>
+					</DesignTable>
+				</children>
+				<localization so="1">
+					<children>
+						<LocLangData lang="es">
+							<style pageTitle="Entrega"/>
+						</LocLangData>
+						<LocLangData lang="de">
+							<style pageTitle="Zustellung"/>
+						</LocLangData>
+						<LocLangData lang="ja">
+							<style pageTitle="配達"/>
+						</LocLangData>
+						<LocLangData lang="fr">
+							<style pageTitle="Livraison"/>
+						</LocLangData>
+					</children>
+				</localization>
+				<onPageLoadActions id="124">
+					<children>
+						<DesignActionUpdateNode id="225" needsClient="1" updAt="$USER/U/@NextDestination" resOf="1"/>
+						<DesignActionGroupRef id="240" groupRef="241"/>
+						<DesignActionGroupRef id="34338" groupRef="34335"/>
+					</children>
+				</onPageLoadActions>
+				<onPageRefreshActions id="125" needsClient="1" refreshOnTimer="1" timerSeconds="$USER/U/@GeoUpdateFrequency">
+					<children>
+						<DesignActionPageRefreshOnTimer id="223">
+							<children>
+								<DesignActionCondition id="235" needsClient="1" condition="$USER/U/@GeoUpdateFrequency != 0">
+									<children>
+										<DesignActionConditionTrue id="236">
+											<children>
+												<DesignActionCondition id="34102" needsClient="1" condition="not( Arrived() )">
+													<children>
+														<DesignActionConditionTrue id="34103">
+															<children>
+																<DesignActionGroupRef id="34104" groupRef="241"/>
+																<DesignActionGroupRef id="34340" groupRef="34341"/>
+															</children>
+														</DesignActionConditionTrue>
+													</children>
+												</DesignActionCondition>
+											</children>
+										</DesignActionConditionTrue>
+									</children>
+								</DesignActionCondition>
+							</children>
+						</DesignActionPageRefreshOnTimer>
+					</children>
+				</onPageRefreshActions>
+				<onBackButtonActions id="171">
+					<children>
+						<DesignActionCondition id="33628" needsClient="1" condition="$USER/U/@NextDestination != 1">
+							<children>
+								<DesignActionConditionTrue id="33629">
+									<children>
+										<DesignActionMessageBox id="33630" msgBoxKind="yesno" msgBoxMsg="mt-load-string( &apos;interrupt delivery&apos; ) || &apos;
+
+&apos; ||
+mt-load-string( &apos;sure&apos; )">
+											<children>
+												<DesignActionMessageBoxButton id="33631">
+													<children>
+														<DesignActionReturnFromSubpage id="33635"/>
+													</children>
+												</DesignActionMessageBoxButton>
+												<DesignActionMessageBoxButton id="33633"/>
+											</children>
+										</DesignActionMessageBox>
+									</children>
+								</DesignActionConditionTrue>
+								<DesignActionConditionFalse id="33636">
+									<children>
+										<DesignActionReturnFromSubpage id="33634"/>
+									</children>
+								</DesignActionConditionFalse>
+							</children>
+						</DesignActionCondition>
+					</children>
+				</onBackButtonActions>
+				<xmlRoots>
+					<PageXMLRootRef id="161" refXMLRoot="62"/>
+					<PageXMLRootRef id="162" refXMLRoot="90"/>
+				</xmlRoots>
+			</DesignPage>
+			<DesignPage id="33362" subPage="1">
+				<style backgroundColor_x="$EnforceBackgroundColor" name="Packages" pageTitle="Packages"/>
+				<children>
+					<DesignLabel id="33372">
+						<style multiLine="1" name="Label1" text="Please hand over the following parcels:" textSize="small"/>
+						<localization so="1">
+							<children>
+								<LocLangData lang="de">
+									<style text="Bitte übergeben Sie die folgenden Pakete:"/>
+								</LocLangData>
+								<LocLangData lang="ja">
+									<style text="次の荷物を渡してください:"/>
+								</LocLangData>
+								<LocLangData lang="es">
+									<style text="Haga entrega de los siguientes paquetes:"/>
+								</LocLangData>
+								<LocLangData lang="fr">
+									<style text="Veuillez remettre les paquets suivants :"/>
+								</LocLangData>
+							</children>
+						</localization>
+					</DesignLabel>
+					<DesignTable id="33400">
+						<style name="Table1"/>
+						<children>
+							<DesignTableCol id="33401">
+								<style colWidth="10%"/>
+							</DesignTableCol>
+							<DesignTableCol id="33402">
+								<style colWidth="wrap_content"/>
+							</DesignTableCol>
+							<DesignTableCol id="33403">
+								<style colWidth="wrap_content"/>
+							</DesignTableCol>
+							<DesignTableCol id="33404">
+								<style colWidth="wrap_content"/>
+							</DesignTableCol>
+							<DesignTableRowGroup id="33394">
+								<style addDelPossible="0" repeating="1" repeatingXPath_x="Parcels()"/>
+								<children>
+									<DesignTableRow id="33395">
+										<children>
+											<DesignTableCellEmpty id="33396"/>
+											<DesignLabel id="33405">
+												<style name="Label4" text_x="&apos;#&apos; || @id" textColor_x="$EmphasizedColor"/>
+											</DesignLabel>
+											<DesignLabel id="33407">
+												<style name="Label5" text_x="&apos;   &apos; || @weight || IF( IsMetric(), &apos; kg&apos;, &apos; lbs&apos; )"/>
+											</DesignLabel>
+											<DesignLabel id="33409">
+												<style name="Label6" text_x="&apos;   &apos; || (
+	if ( IsMetric() )
+	then replace( @dimensions, &apos; &apos;, &apos;x&apos; ) || &apos; cm&apos;
+	else ( tokenize( @dimensions, &apos; &apos; ) ! ( . || &apos;&quot;&apos; ) ) =&gt; string-join( &apos;x&apos; )
+)"/>
+											</DesignLabel>
+										</children>
+									</DesignTableRow>
+								</children>
+							</DesignTableRowGroup>
+						</children>
+					</DesignTable>
+					<DesignTable id="33388">
+						<style name="Table2"/>
+						<children>
+							<DesignTableCol id="33389"/>
+							<DesignTableRow id="33393">
+								<children>
+									<DesignLabel id="33384">
+										<style multiLine="1" name="Label3" text="to:" textSize="small"/>
+										<localization so="1">
+											<children>
+												<LocLangData lang="de">
+													<style text="an:"/>
+												</LocLangData>
+												<LocLangData lang="ja">
+													<style text="へ:"/>
+												</LocLangData>
+												<LocLangData lang="es">
+													<style text="a:"/>
+												</LocLangData>
+												<LocLangData lang="fr">
+													<style text="à :"/>
+												</LocLangData>
+											</children>
+										</localization>
+									</DesignLabel>
+								</children>
+							</DesignTableRow>
+						</children>
+					</DesignTable>
+					<DesignTable id="33378">
+						<style name="Table3"/>
+						<children>
+							<DesignTableCol id="33379">
+								<style colWidth="10%"/>
+							</DesignTableCol>
+							<DesignTableCol id="33380"/>
+							<DesignTableRow id="33381">
+								<children>
+									<DesignTableCellEmpty id="33377"/>
+									<DesignLabel id="33375">
+										<style name="Label2" text_x="CurrentDestination()/@name" textColor_x="$EmphasizedColor"/>
+									</DesignLabel>
+								</children>
+							</DesignTableRow>
+						</children>
+					</DesignTable>
+					<DesignVSpace id="33422">
+						<style name="Space2"/>
+					</DesignVSpace>
+					<DesignLabel id="33499">
+						<style multiLine="1" name="Label12" text="Did you find somebody to deliver parcels?" textSize="small"/>
+						<localization so="1">
+							<children>
+								<LocLangData lang="de">
+									<style text="War jemand anwesend, der die Pakete entgegengenommen hat?"/>
+								</LocLangData>
+								<LocLangData lang="ja">
+									<style text="荷物を誰かに受け渡すことができましたか?"/>
+								</LocLangData>
+								<LocLangData lang="es">
+									<style text="¿Ha encontrado a alguien para hacer entrega de los paquetes?"/>
+								</LocLangData>
+								<LocLangData lang="fr">
+									<style text="Avez-vous trouvé quelqu&apos;un à qui remettre les paquets ?"/>
+								</LocLangData>
+							</children>
+						</localization>
+					</DesignLabel>
+					<DesignTable id="33512">
+						<style name="Table4"/>
+						<children>
+							<DesignTableCol id="33513">
+								<style colWidth="10%"/>
+							</DesignTableCol>
+							<DesignTableCol id="33514"/>
+							<DesignTableRow id="33515">
+								<children>
+									<DesignTableCellEmpty id="33505"/>
+									<DesignRadioButton id="34111" pageXML="33448" checkedValues="C">
+										<style cbRight="0" name="Radio Button1" text=" Customer personally"/>
+										<localization so="1">
+											<children>
+												<LocLangData lang="de">
+													<style text=" Kunde persönlich"/>
+												</LocLangData>
+												<LocLangData lang="ja">
+													<style text=" 顧客に直接受け渡しました"/>
+												</LocLangData>
+												<LocLangData lang="es">
+													<style text="Cliente mismo"/>
+												</LocLangData>
+												<LocLangData lang="fr">
+													<style text=" Le client en mains propres"/>
+												</LocLangData>
+											</children>
+										</localization>
+									</DesignRadioButton>
+								</children>
+							</DesignTableRow>
+							<DesignTableRow id="33516">
+								<children>
+									<DesignTableCellEmpty id="33517"/>
+									<DesignRadioButton id="34113" pageXML="33448" checkedValues="S">
+										<style cbRight="0" name="Radio Button2" text=" Somebody else"/>
+										<localization so="1">
+											<children>
+												<LocLangData lang="de">
+													<style text=" Jemand anderer"/>
+												</LocLangData>
+												<LocLangData lang="ja">
+													<style text=" 他の誰か"/>
+												</LocLangData>
+												<LocLangData lang="es">
+													<style text="Otra persona"/>
+												</LocLangData>
+												<LocLangData lang="fr">
+													<style text=" Quelqu&apos;un d&apos;autre"/>
+												</LocLangData>
+											</children>
+										</localization>
+									</DesignRadioButton>
+								</children>
+							</DesignTableRow>
+							<DesignTableRow id="34232">
+								<style visible_x="$USER/U/CurrentDelivery/@DeliveryTo = &apos;S&apos;"/>
+								<children>
+									<DesignTableCellEmpty id="34233"/>
+									<DesignTable id="34220">
+										<style name="Table5"/>
+										<children>
+											<DesignTableCol id="34221">
+												<style colWidth="wrap_content"/>
+											</DesignTableCol>
+											<DesignTableCol id="34222"/>
+											<DesignTableRow id="34223">
+												<children>
+													<DesignLabel id="34224">
+														<style name="Label8" text="name: "/>
+														<localization so="1">
+															<children>
+																<LocLangData lang="de">
+																	<style text="Name: "/>
+																</LocLangData>
+																<LocLangData lang="ja">
+																	<style text="名前:"/>
+																</LocLangData>
+																<LocLangData lang="es">
+																	<style text="nombre:"/>
+																</LocLangData>
+																<LocLangData lang="fr">
+																	<style text="nom : "/>
+																</LocLangData>
+															</children>
+														</localization>
+													</DesignLabel>
+													<DesignEditField id="34226" pageXML="33615">
+														<style name="Edit Field1"/>
+													</DesignEditField>
+												</children>
+											</DesignTableRow>
+											<DesignTableRow id="34228">
+												<children>
+													<DesignVSpace id="34229">
+														<style name="Space1" spaceHeight="10px"/>
+													</DesignVSpace>
+													<DesignTableCellEmpty id="34231"/>
+												</children>
+											</DesignTableRow>
+										</children>
+									</DesignTable>
+								</children>
+							</DesignTableRow>
+							<DesignTableRow id="33518">
+								<children>
+									<DesignTableCellEmpty id="33519"/>
+									<DesignRadioButton id="34115" pageXML="33448" checkedValues="N">
+										<style cbRight="0" name="Radio Button3" text=" Nobody"/>
+										<localization so="1">
+											<children>
+												<LocLangData lang="de">
+													<style text=" Niemand"/>
+												</LocLangData>
+												<LocLangData lang="ja">
+													<style text=" 誰でもない"/>
+												</LocLangData>
+												<LocLangData lang="es">
+													<style text="Nadie"/>
+												</LocLangData>
+												<LocLangData lang="fr">
+													<style text=" Personne"/>
+												</LocLangData>
+											</children>
+										</localization>
+									</DesignRadioButton>
+								</children>
+							</DesignTableRow>
+						</children>
+					</DesignTable>
+					<DesignVSpace id="33521">
+						<style name="Space3" visible_x="Delivered()"/>
+					</DesignVSpace>
+					<DesignLabel id="33523">
+						<style multiLine="1" name="Label13" text="Have any of the parcels been damaged?" textSize="small" visible_x="Delivered()"/>
+						<localization so="1">
+							<children>
+								<LocLangData lang="de">
+									<style text="Sind Pakete beschädigt?"/>
+								</LocLangData>
+								<LocLangData lang="ja">
+									<style text="損傷を受けた荷物はありましたか?"/>
+								</LocLangData>
+								<LocLangData lang="es">
+									<style text="¿Se han repartido paquetes en mal estado?"/>
+								</LocLangData>
+								<LocLangData lang="fr">
+									<style text="Des paquets ont-ils été endommagés ?"/>
+								</LocLangData>
+							</children>
+						</localization>
+					</DesignLabel>
+					<DesignTable id="33525">
+						<style name="Table6" visible_x="Delivered()"/>
+						<children>
+							<DesignTableCol id="33526">
+								<style colWidth="10%"/>
+							</DesignTableCol>
+							<DesignTableCol id="33527"/>
+							<DesignTableCol id="33620"/>
+							<DesignTableRow id="33528">
+								<children>
+									<DesignTableCellEmpty id="33529"/>
+									<DesignRadioButton id="34117" pageXML="33455" checkedValues="true">
+										<style cbRight="0" name="Radio Button4" text=" Yes"/>
+										<localization so="1">
+											<children>
+												<LocLangData lang="de">
+													<style text=" Ja"/>
+												</LocLangData>
+												<LocLangData lang="ja">
+													<style text="はい"/>
+												</LocLangData>
+												<LocLangData lang="es">
+													<style text="Sí"/>
+												</LocLangData>
+												<LocLangData lang="fr">
+													<style text=" Oui"/>
+												</LocLangData>
+											</children>
+										</localization>
+									</DesignRadioButton>
+									<DesignRadioButton id="34119" pageXML="33455" checkedValues="false">
+										<style cbRight="0" name="Radio Button5" text=" No"/>
+										<localization so="1">
+											<children>
+												<LocLangData lang="de">
+													<style text=" Nein"/>
+												</LocLangData>
+												<LocLangData lang="ja">
+													<style text="いいえ"/>
+												</LocLangData>
+												<LocLangData lang="es">
+													<style text="No"/>
+												</LocLangData>
+												<LocLangData lang="fr">
+													<style text=" Non"/>
+												</LocLangData>
+											</children>
+										</localization>
+									</DesignRadioButton>
+								</children>
+							</DesignTableRow>
+						</children>
+					</DesignTable>
+					<DesignLabel id="33551">
+						<style multiLine="1" name="Label14" text="Describe how severe was damage and whether customer insisted on replacement:" textSize="small" visible_x="AnythingDamaged()"/>
+						<localization so="1">
+							<children>
+								<LocLangData lang="de">
+									<style text="Beschreiben Sie die Schwere des Schadens und geben Sie an, ob der Kunde auf einem Ersatz bestanden hat:"/>
+								</LocLangData>
+								<LocLangData lang="ja">
+									<style text="損傷の程度を説明してください。また顧客が荷物の交換を主張しましたか。"/>
+								</LocLangData>
+								<LocLangData lang="es">
+									<style text="Describa la gravedad del daño y si el cliente insiste en obtener una compensación por daños:"/>
+								</LocLangData>
+								<LocLangData lang="fr">
+									<style text="Décrivez la gravité des dommages et si le client a exigé un remplacement :"/>
+								</LocLangData>
+							</children>
+						</localization>
+					</DesignLabel>
+					<DesignTable id="33553">
+						<style name="Table7" visible_x="AnythingDamaged()"/>
+						<children>
+							<DesignTableCol id="33554">
+								<style colWidth="10%"/>
+							</DesignTableCol>
+							<DesignTableCol id="33555">
+								<style colWidth="wrap_content"/>
+							</DesignTableCol>
+							<DesignTableCol id="33556"/>
+							<DesignTableRowGroup id="33558" pageXML="33543" needsClient="1">
+								<style addDelPossible="0" repeating="1"/>
+								<children>
+									<DesignTableRow id="33559">
+										<children>
+											<DesignTableCellEmpty id="33560"/>
+											<DesignLabel id="33561">
+												<style name="Label7" text_x="&apos;#&apos; || @id || &apos;   &apos;"/>
+											</DesignLabel>
+											<DesignCombo id="33567" pageXML="33545" comboEntryFromList="0" comboEntryVisValues="1" xpath="$DamageResolution" xpathValues="$DamageResolution ! DamageResolutionText(.)">
+												<style multiLine="1" name="Combo Box1"/>
+											</DesignCombo>
+										</children>
+									</DesignTableRow>
+								</children>
+							</DesignTableRowGroup>
+						</children>
+					</DesignTable>
+					<DesignVSpace id="33572">
+						<style name="Space5"/>
+					</DesignVSpace>
+					<DesignButton id="34151">
+						<style multiLine="1" name="Button2" text="Please sign" visible_x="Delivered() and DamageReportConsistent() and DamageReportResultsAcceptedParcels()"/>
+						<localization so="1">
+							<children>
+								<LocLangData lang="de">
+									<style text="Bitte unterschreiben"/>
+								</LocLangData>
+								<LocLangData lang="ja">
+									<style text="署名してください"/>
+								</LocLangData>
+								<LocLangData lang="es">
+									<style text="Firme, por favor"/>
+								</LocLangData>
+								<LocLangData lang="fr">
+									<style text="Veuillez signer"/>
+								</LocLangData>
+							</children>
+						</localization>
+						<controlActions id="34152">
+							<children>
+								<DesignActionGotoSubpage id="34186" showLoadSubpageMsg="0" showCloseSubpageMsg="0" pageRef="34134"/>
+								<DesignActionCondition id="34189" needsClient="1" condition="$USER/U/CurrentDelivery/@SignedAndProceeded = &apos;true&apos;">
+									<children>
+										<DesignActionConditionTrue id="34190">
+											<children>
+												<DesignActionReturnFromSubpage id="34191"/>
+											</children>
+										</DesignActionConditionTrue>
+									</children>
+								</DesignActionCondition>
+							</children>
+						</controlActions>
+					</DesignButton>
+					<DesignButton id="33466">
+						<style multiLine="1" name="Button1" text="Proceed with the next Destination" visible_x="( $USER/U/CurrentDelivery/@DeliveryTo = &apos;N&apos; ) or not( DamageReportResultsAcceptedParcels() )"/>
+						<localization so="1">
+							<children>
+								<LocLangData lang="de">
+									<style text="Weiter zum nächsten Ziel"/>
+								</LocLangData>
+								<LocLangData lang="ja">
+									<style text="次の目的地に向かう。"/>
+								</LocLangData>
+								<LocLangData lang="es">
+									<style text="Diríjase al siguiente destino"/>
+								</LocLangData>
+								<LocLangData lang="fr">
+									<style text="Continuez avec la destination suivante"/>
+								</LocLangData>
+							</children>
+						</localization>
+						<controlActions id="33467">
+							<children>
+								<DesignActionMessageBox id="33625" msgBoxKind="yesno" msgBoxMsg="mt-load-string( &apos;complete progress&apos; )">
+									<children>
+										<DesignActionMessageBoxButton id="33626">
+											<children>
+												<DesignActionGroupRef id="34238" groupRef="34239"/>
+												<DesignActionReturnFromSubpage id="33624"/>
+											</children>
+										</DesignActionMessageBoxButton>
+										<DesignActionMessageBoxButton id="33627"/>
+									</children>
+								</DesignActionMessageBox>
+							</children>
+						</controlActions>
+					</DesignButton>
+				</children>
+				<localization so="1">
+					<children>
+						<LocLangData lang="de">
+							<style pageTitle="Pakete"/>
+						</LocLangData>
+						<LocLangData lang="es">
+							<style pageTitle="Paquetes:"/>
+						</LocLangData>
+						<LocLangData lang="ja">
+							<style pageTitle="荷物"/>
+						</LocLangData>
+						<LocLangData lang="fr">
+							<style pageTitle="Paquets"/>
+						</LocLangData>
+					</children>
+				</localization>
+				<onPageLoadActions id="187">
+					<children>
+						<DesignActionUpdateNode id="33546" needsClient="1" updAt="$USER/U/CurrentDelivery/@*" resOf="&apos;&apos;"/>
+						<DesignActionDeleteNode id="33549" needsClient="1" delAt="$USER/U/CurrentDelivery/DamagedParcels"/>
+						<DesignActionAppendNode id="33550" needsClient="1" appAt="$USER/U/CurrentDelivery" resOf="let $parcels := Parcels()
+let $res := IF( count( $parcels ) = 1, &apos;Y&apos; )
+return $parcels ! element DamagedParcels { @id, attribute resolution { $res } }"/>
+					</children>
+				</onPageLoadActions>
+				<onBackButtonActions id="189">
+					<children>
+						<DesignActionCondition id="33576" needsClient="1" condition="$USER/U/CurrentDelivery/@* != &apos;&apos;">
+							<children>
+								<DesignActionConditionTrue id="33577">
+									<children>
+										<DesignActionMessageBox id="33578" msgBoxKind="yesno" msgBoxMsg="mt-load-string( &apos;changes lost&apos; ) || &apos;
+
+&apos; ||
+mt-load-string( &apos;sure&apos; )">
+											<children>
+												<DesignActionMessageBoxButton id="33579">
+													<children>
+														<DesignActionReturnFromSubpage id="33580"/>
+													</children>
+												</DesignActionMessageBoxButton>
+												<DesignActionMessageBoxButton id="33581"/>
+											</children>
+										</DesignActionMessageBox>
+									</children>
+								</DesignActionConditionTrue>
+								<DesignActionConditionFalse id="33582">
+									<children>
+										<DesignActionReturnFromSubpage id="33583"/>
+									</children>
+								</DesignActionConditionFalse>
+							</children>
+						</DesignActionCondition>
+					</children>
+				</onBackButtonActions>
+				<xmlRoots>
+					<PageXMLRootRef id="33382" refXMLRoot="62"/>
+					<PageXMLRootRef id="33383" refXMLRoot="90"/>
+				</xmlRoots>
+			</DesignPage>
+			<DesignPage id="34134" subPage="1">
+				<style name="Please Sign" pageTitle="Please Sign"/>
+				<children>
+					<DesignLabel id="34192">
+						<style align="center" multiLine="1" name="Label1" text_x="string-join( ( GetSigneeName(), mt-load-string( &apos;sign to confirm receipt&apos; ) ) )" textSize="small"/>
+					</DesignLabel>
+					<DesignSignatureField id="34242" pageXML="34196">
+						<style align="center" name="Signature Field1" width_x="if ($MT_Landscape) then &apos;80%&apos; else &apos;fill_parent&apos;"/>
+						<ImgFileSettings id="34244" imgSrcType="base64"/>
+					</DesignSignatureField>
+					<DesignButton id="34171">
+						<style multiLine="1" name="Button1" text="Proceed with the next Destination" visible_x="Delivered() and DamageReportConsistent() and string-length( $USER/U/CurrentDelivery/@Signature ) &gt; 0"/>
+						<localization so="1">
+							<children>
+								<LocLangData lang="de">
+									<style text="Weiter zum nächsten Ziel"/>
+								</LocLangData>
+								<LocLangData lang="ja">
+									<style text="次の目的地に向かう。"/>
+								</LocLangData>
+								<LocLangData lang="es">
+									<style text="Diríjase al siguiente destino"/>
+								</LocLangData>
+								<LocLangData lang="fr">
+									<style text="Continuez avec la destination suivante"/>
+								</LocLangData>
+							</children>
+						</localization>
+						<controlActions id="34172">
+							<children>
+								<DesignActionMessageBox id="34175" msgBoxKind="yesno" msgBoxMsg="mt-load-string( &apos;complete progress&apos; )">
+									<children>
+										<DesignActionMessageBoxButton id="34176">
+											<children>
+												<DesignActionUpdateNode id="34280" needsClient="1" updAt="$USER/U/CurrentDelivery/@SignedAndProceeded" resOf="&apos;true&apos;"/>
+												<DesignActionGroupRef id="34240" groupRef="34239"/>
+												<DesignActionReturnFromSubpage id="34179"/>
+											</children>
+										</DesignActionMessageBoxButton>
+										<DesignActionMessageBoxButton id="34180"/>
+									</children>
+								</DesignActionMessageBox>
+							</children>
+						</controlActions>
+					</DesignButton>
+				</children>
+				<localization so="1">
+					<children>
+						<LocLangData lang="ja">
+							<style pageTitle="署名してください"/>
+						</LocLangData>
+						<LocLangData lang="de">
+							<style pageTitle="Bitte unterschreiben"/>
+						</LocLangData>
+						<LocLangData lang="fr">
+							<style pageTitle="Veuillez signer"/>
+						</LocLangData>
+						<LocLangData lang="es">
+							<style pageTitle="Firme por favor"/>
+						</LocLangData>
+					</children>
+				</localization>
+				<onPageLoadActions id="366">
+					<children>
+						<DesignActionUpdateNode id="34283" needsClient="1" updAt="$USER/U/CurrentDelivery/@Signature" resOf="&apos;&apos;"/>
+						<DesignActionUpdateNode id="34281" needsClient="1" updAt="$USER/U/CurrentDelivery/@SignedAndProceeded" resOf="&apos;false&apos;"/>
+					</children>
+				</onPageLoadActions>
+				<xmlRoots>
+					<PageXMLRootRef id="34137" refXMLRoot="90"/>
+					<PageXMLRootRef id="34181" refXMLRoot="62"/>
+				</xmlRoots>
+			</DesignPage>
+			<DesignPage id="33638" subPage="1">
+				<style backgroundColor_x="$EnforceBackgroundColor" name="Summary" pageTitle="Summary"/>
+				<children>
+					<DesignLabel id="33658">
+						<style align="center" name="Label1" text="Delivery Summary:" weight="1"/>
+						<localization so="1">
+							<children>
+								<LocLangData lang="de">
+									<style text="Zustellbericht:"/>
+								</LocLangData>
+								<LocLangData lang="ja">
+									<style text="配達の要約:"/>
+								</LocLangData>
+								<LocLangData lang="es">
+									<style text="Informe de entrega:"/>
+								</LocLangData>
+								<LocLangData lang="fr">
+									<style text="Résumé des livraisons :"/>
+								</LocLangData>
+							</children>
+						</localization>
+					</DesignLabel>
+					<DesignCheckBox id="34270" pageXML="34272">
+						<style name="Check Box1" text="Show signatures"/>
+						<localization so="1">
+							<children>
+								<LocLangData lang="de">
+									<style text="Unterschriften anzeigen"/>
+								</LocLangData>
+								<LocLangData lang="fr">
+									<style text="Afficher les signatures"/>
+								</LocLangData>
+								<LocLangData lang="ja">
+									<style text="署名を表示"/>
+								</LocLangData>
+								<LocLangData lang="es">
+									<style text="Mostrar firmas"/>
+								</LocLangData>
+							</children>
+						</localization>
+					</DesignCheckBox>
+					<DesignTable id="33662" pageXML="33637">
+						<style name="Table1"/>
+						<children>
+							<DesignTableCol id="33663">
+								<style colWidth="wrap_content"/>
+							</DesignTableCol>
+							<DesignTableCol id="34255"/>
+							<DesignTableCol id="34256">
+								<style colWidth_x="if ( $PERSISTENT/Root/ShowSignature = &apos;true&apos; )
+then &apos;fill_parent&apos;
+else &apos;wrap_content&apos;"/>
+							</DesignTableCol>
+							<DesignTableRowGroup id="33665" pageXML="33646" needsClient="1">
+								<style addDelPossible="0"/>
+								<children>
+									<DesignTableRow id="34257">
+										<children>
+											<DesignLabel id="34245">
+												<style name="Label6" text_x="@name || &apos;  &apos;" textColor_x="$EmphasizedColor"/>
+											</DesignLabel>
+											<DesignLabel id="34247">
+												<style multiLine="1" name="Label7" text_x="@company"/>
+											</DesignLabel>
+											<DesignImage id="34249" pageXML="34150">
+												<style name="Image1" visible_x="if ( $PERSISTENT/Root/ShowSignature != &apos;false&apos; )
+then string-length(@signature)&gt;0
+else false()"/>
+												<ImgFileSettings id="34251" imgSrcType="base64"/>
+											</DesignImage>
+										</children>
+									</DesignTableRow>
+									<DesignTableRow id="34333">
+										<children>
+											<DesignTable id="34316">
+												<style colSpan="3" name="Table2"/>
+												<children>
+													<DesignTableCol id="34317">
+														<style colWidth="5%"/>
+													</DesignTableCol>
+													<DesignTableCol id="34318"/>
+													<DesignTableRow id="34319">
+														<children>
+															<DesignTableCellEmpty id="34313"/>
+															<DesignLabel id="34314" pageXML="33648">
+																<style multiLine="1" name="Label3"/>
+															</DesignLabel>
+														</children>
+													</DesignTableRow>
+													<DesignTableRow id="34320">
+														<children>
+															<DesignTableCellEmpty id="34321"/>
+															<DesignTable id="34323" pageXML="33649">
+																<style name="Table3"/>
+																<children>
+																	<DesignTableCol id="34324">
+																		<style colWidth="wrap_content"/>
+																	</DesignTableCol>
+																	<DesignTableCol id="34325"/>
+																	<DesignTableRowGroup id="34326" pageXML="33649" needsClient="1">
+																		<style addDelPossible="0"/>
+																		<children>
+																			<DesignTableRow id="34327">
+																				<children>
+																					<DesignLabel id="34328">
+																						<style name="Label4" text_x="&apos;#&apos; || @id || &apos; &apos;" textSize="small"/>
+																					</DesignLabel>
+																					<DesignLabel id="34330">
+																						<style multiLine="1" name="Label5" text_x="DamageResolutionText( @resolution )" textSize="small"/>
+																					</DesignLabel>
+																				</children>
+																			</DesignTableRow>
+																		</children>
+																	</DesignTableRowGroup>
+																</children>
+															</DesignTable>
+														</children>
+													</DesignTableRow>
+												</children>
+											</DesignTable>
+										</children>
+									</DesignTableRow>
+									<DesignTableRow id="33716">
+										<children>
+											<DesignHLine id="33717">
+												<style colSpan="3" marginBottom="5px" marginTop="5px" name="Horizontal Line1" visible_x="following-sibling::Entry"/>
+											</DesignHLine>
+										</children>
+									</DesignTableRow>
+								</children>
+							</DesignTableRowGroup>
+						</children>
+					</DesignTable>
+					<DesignVSpace id="33984">
+						<style name="Space4"/>
+					</DesignVSpace>
+					<DesignButton id="33986">
+						<style name="Button1" text_x="if ( RemainingDestinations() )
+then mt-load-string( &apos;proceed todo&apos; )
+else mt-load-string( &apos;delivery end&apos; )"/>
+						<controlActions id="33987">
+							<children>
+								<DesignActionReturnFromSubpage id="33989"/>
+							</children>
+						</controlActions>
+					</DesignButton>
+				</children>
+				<localization so="1">
+					<children>
+						<LocLangData lang="de">
+							<style pageTitle="Zusammenfassung"/>
+						</LocLangData>
+						<LocLangData lang="es">
+							<style pageTitle="Resumen"/>
+						</LocLangData>
+						<LocLangData lang="ja">
+							<style pageTitle="要約"/>
+						</LocLangData>
+						<LocLangData lang="fr">
+							<style pageTitle="Résumé"/>
+						</LocLangData>
+					</children>
+				</localization>
+				<xmlRoots>
+					<PageXMLRootRef id="33988" refXMLRoot="62"/>
+					<PageXMLRootRef id="33669" refXMLRoot="90"/>
+				</xmlRoots>
+			</DesignPage>
+			<DesignPage id="34072">
+				<style name="Intro" pageTitle="Intro"/>
+				<children>
+					<DesignTable id="34038">
+						<style name="Table1"/>
+						<children>
+							<DesignTableCol id="34039"/>
+							<DesignTableRow id="34040">
+								<children>
+									<DesignLabel id="34041">
+										<style align="center" name="Label1" text="Parcel Delivery Demo" weight="1"/>
+										<localization so="1">
+											<children>
+												<LocLangData lang="de">
+													<style text="Paketzustell-Demo"/>
+												</LocLangData>
+												<LocLangData lang="ja">
+													<style text="荷物の配達のデモ"/>
+												</LocLangData>
+												<LocLangData lang="es">
+													<style text="Demostración de entrega de paquetes"/>
+												</LocLangData>
+												<LocLangData lang="fr">
+													<style text="Démonstration de livraison de paquets"/>
+												</LocLangData>
+											</children>
+										</localization>
+									</DesignLabel>
+								</children>
+							</DesignTableRow>
+							<DesignTableRow id="34043">
+								<children>
+									<DesignVSpace id="34044">
+										<style name="Space1"/>
+									</DesignVSpace>
+								</children>
+							</DesignTableRow>
+							<DesignTableRow id="34046">
+								<children>
+									<DesignLabel id="34047">
+										<style multiLine="1" name="Label2" text_x="if  ($MT_iOS ) then mt-load-string( &quot;Intro_OsLess&quot; ) else mt-load-string( &quot;Intro_General&quot; )" textColor_x="if ( IsDarkColor( $MT_PageBackgroundColor ) ) then &apos;#DDDD00&apos; else &apos;#FF0000&apos;"/>
+									</DesignLabel>
+								</children>
+							</DesignTableRow>
+							<DesignTableRow id="34049">
+								<children>
+									<DesignVSpace id="34050">
+										<style name="Space2"/>
+									</DesignVSpace>
+								</children>
+							</DesignTableRow>
+							<DesignTableRow id="34052">
+								<children>
+									<DesignLabel id="34053">
+										<style multiLine="1" name="Label3" text="This example solution demonstrates how to work with geo-location data in MobileTogether. In this demo, you are a driver for a delivery company that has to deliver parcels from a warehouse in New Jersey to various destinations in New York City. You can pick one of three drivers, which all have pre-defined routes assigned to them. You will see a To-Do list and then be guided through the deliveries."/>
+										<localization so="1">
+											<children>
+												<LocLangData lang="de">
+													<style text="In dieser Beispiellösung sehen Sie, wie Sie in MobileTogether mit Standortdaten arbeiten können. Sie sind in dieser Demo ein Fahrer eines Zustelldiensts, der Pakete von einem Warenlager in New Jersey an verschiedene Ziele in New York City zustellen muss. Sie können einen von drei Fahrern auswählen. Jedem dieser Fahrer ist eine vordefinierte Route zugewiesen. Sie sehen eine To-do-Liste und werden zu den einzelnen Zustelladressen gelotst."/>
+												</LocLangData>
+												<LocLangData lang="es">
+													<style text="Esta solución ejemplo muestra cómo funcionan los datos de geolocación en MobileTogether. En esta demostración, usted es el conductor de una mensajería que tiene que hacer la entrega de paquetes desde un almacén en Nueva Jersey a varios destinos en la ciudad de Nueva York. Puede elegir uno de los tres conductores a los que se le han asignado rutas predefinidas. Verá una lista de direcciones y posteriormente será guiado para realizar el reparto."/>
+												</LocLangData>
+												<LocLangData lang="ja">
+													<style text="このソリューションは、MobileTogether の位置情報データの使用をデモします。ニュージャージーの倉庫からニューヨークの異なる配達地点へと荷物を配達する会社を経営するとします。予め用意されたルートを与えられた3人の運転手から1人選ぶことができます。やることリストを見ながら、配達を確認することができます。"/>
+												</LocLangData>
+												<LocLangData lang="fr">
+													<style text="Cet exemple de solution montre comment travailler avec les données de géolocalisation dans MobileTogether. Dans cette démonstration, vous êtes un conducteur-coursier pour une entreprise de livraison qui doit livrer des paquets depuis un entrepôt à New Jersey vers des destinations à New York. Vous pouvez choisir un des trois conducteurs qui suivent tous des trajets prédéfinis. Vous verrez une liste de tâches et serez guidé au fil des livraisons."/>
+												</LocLangData>
+											</children>
+										</localization>
+									</DesignLabel>
+								</children>
+							</DesignTableRow>
+							<DesignTableRow id="34055">
+								<children>
+									<DesignTableCellEmpty id="34056"/>
+								</children>
+							</DesignTableRow>
+							<DesignTableRow id="34057">
+								<children>
+									<DesignLabel id="34058">
+										<style multiLine="1" name="Label4" text="When running the demo on a mobile device, real geo-location data is used. When running it in the Simulator in MobileTogether Designer, there are three pre-defined tracks that simulate the drive on the three routes."/>
+										<localization so="1">
+											<children>
+												<LocLangData lang="de">
+													<style text="Bei Ausführung der Demo auf einem Mobilgerät werden echte Standortdaten verwendet. Bei Ausführung der Lösung im Simulator von MobileTogether Designer werden zur Simulation drei vordefinierte Routen verwendet."/>
+												</LocLangData>
+												<LocLangData lang="ja">
+													<style text="モバイルデバイスでデモを実行する際には実際の位置情報が使用されます。MobileTogether Designer のシミュレーターを実行する場合、予め与えられた走路が３つあるルートをシミュレーションします。"/>
+												</LocLangData>
+												<LocLangData lang="es">
+													<style text="Cuando ejecute una demostración en un dispositivo móvil se usan datos de geolocalización reales. Cuando se ejecuta en el simulador de MobileTogether Designer existen tres trazados predefinidos que simulan el reparto en las tres rutas."/>
+												</LocLangData>
+												<LocLangData lang="fr">
+													<style text="Lors de l&apos;exécution de la démonstration sur un appareil mobile, des données de géolocalisation réelles sont utilisées. Si la démonstration est exécutée dans le simulateur de MobileTogether Designer, trois trajets prédéfinis simulent la livraison."/>
+												</LocLangData>
+											</children>
+										</localization>
+									</DesignLabel>
+								</children>
+							</DesignTableRow>
+							<DesignTableRow id="34060">
+								<children>
+									<DesignVSpace id="34061">
+										<style name="Space3"/>
+									</DesignVSpace>
+								</children>
+							</DesignTableRow>
+							<DesignTableRow id="34063">
+								<children>
+									<DesignCheckBox id="34064" pageXML="34081">
+										<style multiLine="1" name="Check Box1" text="Skip this intro in the future"/>
+										<localization so="1">
+											<children>
+												<LocLangData lang="de">
+													<style text="Einführung in Zukunft überspringen"/>
+												</LocLangData>
+												<LocLangData lang="es">
+													<style text="En adelante saltarse la introducción"/>
+												</LocLangData>
+												<LocLangData lang="ja">
+													<style text="このイントロを今後スキップする"/>
+												</LocLangData>
+												<LocLangData lang="fr">
+													<style text="Passer l&apos;intro à l&apos;avenir"/>
+												</LocLangData>
+											</children>
+										</localization>
+									</DesignCheckBox>
+								</children>
+							</DesignTableRow>
+							<DesignTableRow id="34066">
+								<children>
+									<DesignTableCellEmpty id="34067"/>
+								</children>
+							</DesignTableRow>
+							<DesignTableRow id="34068">
+								<children>
+									<DesignButton id="34069">
+										<style name="Button1" text="Next Page"/>
+										<localization so="1">
+											<children>
+												<LocLangData lang="de">
+													<style text="Nächste Seite"/>
+												</LocLangData>
+												<LocLangData lang="es">
+													<style text="Página siguiente"/>
+												</LocLangData>
+												<LocLangData lang="ja">
+													<style text="次のページ"/>
+												</LocLangData>
+												<LocLangData lang="fr">
+													<style text="Page suivante"/>
+												</LocLangData>
+											</children>
+										</localization>
+										<controlActions id="34070">
+											<children>
+												<DesignActionGotoPage id="34071" processRef="13"/>
+											</children>
+										</controlActions>
+									</DesignButton>
+								</children>
+							</DesignTableRow>
+						</children>
+					</DesignTable>
+				</children>
+				<localization so="1">
+					<children>
+						<LocLangData lang="de">
+							<style pageTitle="Einführung"/>
+						</LocLangData>
+						<LocLangData lang="es">
+							<style pageTitle="Introducción"/>
+						</LocLangData>
+						<LocLangData lang="ja">
+							<style pageTitle="イントロ"/>
+						</LocLangData>
+						<LocLangData lang="fr">
+							<style pageTitle="Introduction"/>
+						</LocLangData>
+					</children>
+				</localization>
+				<onPageLoadActions id="34076">
+					<children>
+						<DesignActionCondition id="34083" condition="$PERSISTENT/Root/SkipIntro = true()">
+							<children>
+								<DesignActionConditionTrue id="34084">
+									<children>
+										<DesignActionGotoPage id="34085" processRef="13"/>
+									</children>
+								</DesignActionConditionTrue>
+							</children>
+						</DesignActionCondition>
+					</children>
+				</onPageLoadActions>
+			</DesignPage>
+		</children>
+	</DesignRoot>
+	<ActionGroupRoot id="160">
+		<children>
+			<DesignActionGroup id="241" name="Read Geolocation">
+				<children>
+					<DesignActionUpdateNode id="34095" needsClient="1" updAt="$USER/U/@Timestamp" resOf="high-res-timer()"/>
+					<DesignActionGeolocationRead id="239" readAction="LatLngAddress"/>
+					<DesignActionCondition id="33998" needsClient="1" condition="high-res-timer() - $USER/U/@Timestamp &gt; 2 and
+$USER/U/@GeoUpdateFrequency != 0">
+						<children>
+							<DesignActionConditionTrue id="33999">
+								<children>
+									<DesignActionUpdateNode id="34105" needsClient="1" updAt="$USER/U/@GeoUpdateFrequency" resOf="0"/>
+									<DesignActionMessageBox id="34106" msgBoxMsg="mt-load-string( &apos;geo slow&apos; )">
+										<children>
+											<DesignActionMessageBoxButton id="34107"/>
+										</children>
+									</DesignActionMessageBox>
+								</children>
+							</DesignActionConditionTrue>
+							<DesignActionConditionFalse id="34007"/>
+						</children>
+					</DesignActionCondition>
+				</children>
+			</DesignActionGroup>
+			<DesignActionGroup id="33358" name="Release Parcels">
+				<children>
+					<DesignActionGotoSubpage id="33370" pageRef="33362"/>
+					<DesignActionCondition id="33591" needsClient="1" condition="$USER/U/CurrentDelivery/@Completed = &apos;true&apos;">
+						<children>
+							<DesignActionConditionTrue id="33592">
+								<children>
+									<DesignActionGroupRef id="33939" groupRef="33940"/>
+								</children>
+							</DesignActionConditionTrue>
+						</children>
+					</DesignActionCondition>
+				</children>
+			</DesignActionGroup>
+			<DesignActionGroup id="33940" name="Proceed with Next Destination">
+				<children>
+					<DesignActionCondition id="33585" needsClient="1" condition="IsLastDestination()">
+						<children>
+							<DesignActionConditionTrue id="33586">
+								<children>
+									<DesignActionMessageBox id="33936" msgBoxMsg="mt-load-string( &apos;last delivery&apos; ) || NewLine( 2 ) || mt-load-string( &apos;view report&apos; )">
+										<children>
+											<DesignActionMessageBoxButton id="33937">
+												<children>
+													<DesignActionReturnFromSubpage id="33938"/>
+												</children>
+											</DesignActionMessageBoxButton>
+										</children>
+									</DesignActionMessageBox>
+								</children>
+							</DesignActionConditionTrue>
+							<DesignActionConditionFalse id="33945">
+								<children>
+									<DesignActionUpdateNode id="33944" needsClient="1" updAt="$USER/U/@NextDestination" resOf="$USER/U/@NextDestination + 1"/>
+									<DesignActionGroupRef id="34334" groupRef="34335"/>
+								</children>
+							</DesignActionConditionFalse>
+						</children>
+					</DesignActionCondition>
+				</children>
+			</DesignActionGroup>
+			<DesignActionGroup id="34239" name="Complete Current Delivery">
+				<children>
+					<DesignActionUpdateNode id="34236" needsClient="1" updAt="$USER/U/CurrentDelivery/@Completed" resOf="true()"/>
+					<DesignActionAppendNode id="34237" needsClient="1" appAt="$USER/U/DeliverySummary" resOf="$USER/U/CurrentDelivery !
+(
+	let $any-damaged := Delivered() and @AnythingDamaged = &apos;true&apos;
+
+	let $damaged-quota:= 
+			if ( $any-damaged ) then
+				if			( every  $i in DamagedParcels satisfies $i/@resolution = &apos;N&apos; ) then &apos;R&apos;
+				else if	( some $i in DamagedParcels satisfies $i/@resolution = &apos;N&apos; ) then &apos;P&apos;
+				else ()
+			else ()
+
+	return element Entry
+	{
+			CurrentDestination() ! ( @package, @name, @company ),
+			attribute signature { @Signature },
+			attribute action { format-string( mt-load-string( &apos;delivered_&apos; || @DeliveryTo || $damaged-quota ), @NeighborName ) },
+	
+			if ( $any-damaged )
+			then DamagedParcels[ @resolution != &apos;&apos; ]
+			else ()
+		}
+)"/>
+				</children>
+			</DesignActionGroup>
+			<DesignActionGroup id="34335" name="Vocalize Next Destination">
+				<children>
+					<DesignActionCondition id="34421" needsClient="1" condition="$USER/U/@SpeakDuringDelivery = &apos;true&apos;">
+						<children>
+							<DesignActionConditionTrue id="34422">
+								<children>
+									<DesignActionTextToSpeech id="34420" needsClient="1" speechText="concat(&apos;Your next destination is &apos; ,
+CurrentDestination() ! (
+@company || &apos;
+&apos; || @address ),
+&apos;    You are &apos;,
+DistanceFromDestination() ! format-string( mt-load-string( &apos;away&apos; ), ( ?df, ?u ) )
+ )"/>
+								</children>
+							</DesignActionConditionTrue>
+						</children>
+					</DesignActionCondition>
+				</children>
+			</DesignActionGroup>
+			<DesignActionGroup id="34341" name="Vocalize New Distance to Destination">
+				<children>
+					<DesignActionLoop id="34409" needsClient="1" needsClientView="1" breakLoopIf="mt-text-to-speech-is-speaking() = false()">
+						<children>
+							<DesignActionUpdateNode id="34410" updAt="$PERSISTENT/Root" resOf="sleep(100)"/>
+						</children>
+					</DesignActionLoop>
+					<DesignActionCondition id="34417" needsClient="1" condition="( $USER/U/@SpeakDuringDelivery = &apos;true&apos; )">
+						<children>
+							<DesignActionConditionTrue id="34418">
+								<children>
+									<DesignActionTextToSpeech id="34419" needsClient="1" speechText="concat( 
+&apos;You are &apos;,
+DistanceFromDestination() ! format-string( mt-load-string( &apos;away&apos; ), ( ?df, ?u ) )
+)"/>
+								</children>
+							</DesignActionConditionTrue>
+						</children>
+					</DesignActionCondition>
+				</children>
+			</DesignActionGroup>
+		</children>
+	</ActionGroupRoot>
+	<XPathFunctionsRoot id="11">
+		<children>
+			<DesignXPathFunction id="165" xpath="declare function RemainingDestinations()
+{
+	let $packages := $USER/U/RemainingPackages/package/string()
+	return $TODO/Todo/Driver/Destination[ @package = $packages ]
+}"/>
+			<DesignXPathFunction id="33917" xpath="declare function PartiallyFinishedDestinations()
+{
+	$USER/U/DeliverySummary/has-children() and count( RemainingDestinations() ) &gt; 0
+}"/>
+			<DesignXPathFunction id="183" xpath="declare function CurrentDestination()
+{
+	RemainingDestinations()[ xs:int( $USER/U/@NextDestination ) ]
+}"/>
+			<DesignXPathFunction id="33983" xpath="declare function NextDestination()
+{
+	RemainingDestinations()[ xs:int( $USER/U/@NextDestination ) + 1 ]
+}"/>
+			<DesignXPathFunction id="33943" xpath="declare function IsLastDestination()
+{
+	$USER/U/@NextDestination = count( RemainingDestinations() )
+}"/>
+			<DesignXPathFunction id="33421" xpath="declare function IsMetric()
+{
+	$USER/U/@Units = &apos;M&apos;
+}"/>
+			<DesignXPathFunction id="33343" xpath="declare function DistanceFromDestination()
+{
+	let $l := $MT_GEOLOCATION/Root/Location/@Geolocation return
+	if ( $l ) then
+		let $dkm := geolocation-distance-km( $l, CurrentDestination()/@geo )
+		let $d := IF( IsMetric(), $dkm, $dkm * 0.62137 )
+		let $threshold := IF( IsMetric(), 1, 0.5 ) return
+	
+		if ( $d &lt; $threshold ) then
+			let $d := round( if ( IsMetric() ) then $d * 1000 else $d * 5280 )
+			return map {
+				&apos;d&apos; : $d,
+				&apos;dkm&apos; : $dkm,
+				&apos;df&apos; : mt-format-number( $d, &apos;0&apos; ),
+				&apos;u&apos; : mt-load-string( IF( $USER/U/@Units = &apos;M&apos;, &apos;m&apos;, &apos;ft&apos; ) )
+			}
+		else
+			let $d := round( $d, 1 )
+			return map {
+				&apos;d&apos; : $d,
+				&apos;dkm&apos; : $dkm,
+				&apos;df&apos; : mt-format-number( $d, &apos;0.0&apos; ),
+				&apos;u&apos; : mt-load-string( IF( $USER/U/@Units = &apos;M&apos;, &apos;km&apos;, &apos;mi&apos; ) )
+			}
+	else
+		()
+}"/>
+			<DesignXPathFunction id="34025" xpath="declare function Arrived()
+{
+	DistanceFromDestination() ?dkm &lt; 0.1
+}"/>
+			<DesignXPathFunction id="33548" xpath="declare function Parcels()
+{
+	let $p := CurrentDestination()/@package return
+	$TODO/Todo/Delivery[ @package = $p ]/Parcel
+}"/>
+			<DesignXPathFunction id="33698" xpath="declare function Delivered()
+{
+	switch ( $USER/U/CurrentDelivery/@DeliveryTo )
+	case &apos;C&apos; return true()
+	case &apos;S&apos; return trim-string( $USER/U/CurrentDelivery/@NeighborName ) != &apos;&apos;
+	default return false()
+}"/>
+			<DesignXPathFunction id="33570" xpath="declare function AnythingDamaged()
+{
+	Delivered() and $USER/U/CurrentDelivery/@AnythingDamaged = &apos;true&apos;
+}"/>
+			<DesignXPathFunction id="33731" xpath="declare function DamageResolutionText( $code as xs:string )
+{
+	mt-load-string( &apos;damage_&apos; || $code )
+}"/>
+			<DesignXPathFunction id="34198" xpath="declare function DamageReportResultsAcceptedParcels()
+{
+	switch ( $USER/U/CurrentDelivery/@AnythingDamaged )
+	case &apos;true&apos; return some $DamagedParcel in  $USER/U/CurrentDelivery/DamagedParcels satisfies ($DamagedParcel/@resolution = &apos;&apos; or  $DamagedParcel/@resolution = &apos;Y&apos;)
+	case &apos;false&apos; return true()
+	default return true()
+}"/>
+			<DesignXPathFunction id="33622" xpath="declare function DamageReportConsistent()
+{
+	switch ( $USER/U/CurrentDelivery/@AnythingDamaged )
+	case &apos;true&apos; return $USER/U/CurrentDelivery/DamagedParcels/@resolution != &apos;&apos;
+	case &apos;false&apos; return true()
+	default return false()
+}"/>
+			<DesignXPathFunction id="33307" xpath="declare function IF( $if, $true )
+{
+	if ( $if ) then $true else ()
+}"/>
+			<DesignXPathFunction id="33308" xpath="declare function IF( $if, $true, $else )
+{
+	if ( $if ) then $true else $else
+}"/>
+			<DesignXPathFunction id="33728" xpath="declare function NewLine( $n as xs:integer )
+{
+	repeat-string( &apos;
+&apos;, $n )
+}"/>
+			<DesignXPathFunction id="34096" xpath="declare function IsDarkColor( $color )
+{
+	count( char( $color, (2,4,6) )[ . &gt;= &apos;0&apos; and . &lt;= &apos;7&apos; ] ) &gt;= 2
+}"/>
+			<DesignXPathFunction id="34241" xpath="declare function GetSigneeName()
+{
+
+	if ( $USER/U/CurrentDelivery/@DeliveryTo = &apos;C&apos; )
+	then
+		CurrentDestination()/@name
+	else 
+		$USER/U/CurrentDelivery/@NeighborName
+}"/>
+		</children>
+	</XPathFunctionsRoot>
+	<PageXMLNamespaceRoot id="16">
+		<children>
+			<PageXMLNamespace id="17" defNS="1"/>
+		</children>
+	</PageXMLNamespaceRoot>
+	<PageXMLPersistentRoot id="18" name="PERSISTENT">
+		<children>
+			<PageXMLElement id="19" name="Root">
+				<children>
+					<PageXMLElement id="34081" name="SkipIntro" mustExist="1" default="false"/>
+					<PageXMLElement id="34272" name="ShowSignature" mustExist="1" default="true"/>
+				</children>
+			</PageXMLElement>
+		</children>
+	</PageXMLPersistentRoot>
+	<PageXMLRootGeolocation id="126" name="MT_GEOLOCATION" readOnlyXML="1">
+		<children>
+			<PageXMLElement id="127" name="Root">
+				<children>
+					<PageXMLElement id="128" name="Location">
+						<children>
+							<PageXMLAttribute id="129" name="AccuracyHorizontal"/>
+							<PageXMLAttribute id="130" name="AccuracyVertical"/>
+							<PageXMLAttribute id="131" name="Altitude"/>
+							<PageXMLAttribute id="132" name="Latitude"/>
+							<PageXMLAttribute id="133" name="Longitude"/>
+							<PageXMLAttribute id="134" name="MagneticHeading"/>
+							<PageXMLAttribute id="135" name="Provider"/>
+							<PageXMLAttribute id="136" name="Speed"/>
+							<PageXMLAttribute id="137" name="Time"/>
+							<PageXMLAttribute id="186" name="Geolocation"/>
+						</children>
+					</PageXMLElement>
+					<PageXMLElement id="138" name="Address">
+						<children>
+							<PageXMLElement id="139" name="AddressLine"/>
+							<PageXMLAttribute id="140" name="AdminArea"/>
+							<PageXMLAttribute id="141" name="CountryCode"/>
+							<PageXMLAttribute id="142" name="CountryName"/>
+							<PageXMLAttribute id="143" name="FeatureName"/>
+							<PageXMLAttribute id="144" name="Locality"/>
+							<PageXMLAttribute id="145" name="Phone"/>
+							<PageXMLAttribute id="146" name="PostalCode"/>
+							<PageXMLAttribute id="147" name="Premises"/>
+							<PageXMLAttribute id="148" name="SubAdminArea"/>
+							<PageXMLAttribute id="149" name="SubLocality"/>
+							<PageXMLAttribute id="150" name="SubThoroughfare"/>
+							<PageXMLAttribute id="151" name="Thoroughfare"/>
+							<PageXMLAttribute id="152" name="Url"/>
+						</children>
+					</PageXMLElement>
+				</children>
+			</PageXMLElement>
+		</children>
+	</PageXMLRootGeolocation>
+	<PageXMLRoots id="15">
+		<children>
+			<PageXMLRootXML id="62" name="TODO" hasUrl="1">
+				<children>
+					<PageXMLElement id="63" name="Todo" from="xml">
+						<children>
+							<PageXMLElement id="64" name="Driver" from="xml">
+								<children>
+									<PageXMLAttribute id="65" name="name" from="xml"/>
+									<PageXMLElement id="66" name="Destination" from="xml">
+										<children>
+											<PageXMLAttribute id="67" name="geo" from="xml"/>
+											<PageXMLAttribute id="68" name="address" from="xml"/>
+											<PageXMLAttribute id="69" name="name" from="xml"/>
+											<PageXMLAttribute id="70" name="company" from="xml"/>
+											<PageXMLAttribute id="71" name="package" from="xml"/>
+										</children>
+									</PageXMLElement>
+								</children>
+							</PageXMLElement>
+							<PageXMLElement id="72" name="Delivery" from="xml">
+								<children>
+									<PageXMLAttribute id="73" name="package" from="xml"/>
+									<PageXMLElement id="74" name="Parcel" from="xml">
+										<children>
+											<PageXMLAttribute id="75" name="id" from="xml"/>
+											<PageXMLAttribute id="76" name="weight" from="xml"/>
+											<PageXMLAttribute id="77" name="dimensions" from="xml"/>
+										</children>
+									</PageXMLElement>
+								</children>
+							</PageXMLElement>
+						</children>
+					</PageXMLElement>
+				</children>
+				<DefaultFile so="1" id="78" url="SampleData\Parcel Routes.xml" deployable_so="80"/>
+			</PageXMLRootXML>
+			<PageXMLRootXML id="90" name="USER" keepDataOn="client">
+				<children>
+					<PageXMLElement id="91" name="U">
+						<children>
+							<PageXMLAttribute id="92" name="Driver" mustExist="1"/>
+							<PageXMLAttribute id="110" name="Units" mustExist="1" default="I"/>
+							<PageXMLAttribute id="207" name="GeoUpdateFrequency" mustExist="1" default="$Intervals[3]" defValueIsXPath="1"/>
+							<PageXMLAttribute id="157" name="NextDestination" mustExist="1"/>
+							<PageXMLAttribute id="34094" name="Timestamp" mustExist="1"/>
+							<PageXMLAttribute id="34393" name="SpeakDuringDelivery" mustExist="1" default="false"/>
+							<PageXMLElement id="33946" name="RemainingPackages" mustExist="1">
+								<children>
+									<PageXMLElement id="33947" name="package"/>
+								</children>
+							</PageXMLElement>
+							<PageXMLElement id="33431" name="CurrentDelivery">
+								<children>
+									<PageXMLAttribute id="33574" name="Completed" mustExist="1"/>
+									<PageXMLAttribute id="33448" name="DeliveryTo" mustExist="1"/>
+									<PageXMLAttribute id="33615" name="NeighborName" mustExist="1"/>
+									<PageXMLAttribute id="34196" name="Signature" mustExist="1"/>
+									<PageXMLAttribute id="33455" name="AnythingDamaged" mustExist="1"/>
+									<PageXMLAttribute id="34282" name="SignedAndProceeded" mustExist="1" default="false"/>
+									<PageXMLElement id="33543" name="DamagedParcels">
+										<children>
+											<PageXMLAttribute id="33544" name="id" mustExist="1"/>
+											<PageXMLAttribute id="33545" name="resolution" mustExist="1"/>
+										</children>
+									</PageXMLElement>
+								</children>
+							</PageXMLElement>
+							<PageXMLElement id="33637" name="DeliverySummary" mustExist="1">
+								<children>
+									<PageXMLElement id="33646" name="Entry">
+										<children>
+											<PageXMLAttribute id="33763" name="package"/>
+											<PageXMLAttribute id="33647" name="customer"/>
+											<PageXMLAttribute id="34150" name="signature"/>
+											<PageXMLAttribute id="33648" name="action"/>
+											<PageXMLElement id="33649" name="DamagedParcels">
+												<children>
+													<PageXMLAttribute id="33650" name="id"/>
+													<PageXMLAttribute id="33651" name="resolution"/>
+												</children>
+											</PageXMLElement>
+										</children>
+									</PageXMLElement>
+								</children>
+							</PageXMLElement>
+						</children>
+					</PageXMLElement>
+				</children>
+			</PageXMLRootXML>
+		</children>
+	</PageXMLRoots>
+	<WorkflowRoot id="12">
+		<children>
+			<WorkflowPageRef id="34080" page="34072"/>
+			<WorkflowPageRef id="13" page="2"/>
+		</children>
+	</WorkflowRoot>
+	<GlobalVariables id="20">
+		<children>
+			<GlobalVariable id="21" sysVar="MT_Android" idxIcon_so="0"/>
+			<GlobalVariable id="22" sysVar="MT_iOS" idxIcon_so="1"/>
+			<GlobalVariable id="23" sysVar="MT_Browser" idxIcon_so="2"/>
+			<GlobalVariable id="24" sysVar="MT_iPad" idxIcon_so="3"/>
+			<GlobalVariable id="25" sysVar="MT_Windows" idxIcon_so="6"/>
+			<GlobalVariable id="26" sysVar="MT_WindowsPhone" idxIcon_so="7"/>
+			<GlobalVariable id="27" sysVar="MT_DeviceWidth"/>
+			<GlobalVariable id="28" sysVar="MT_DeviceHeight"/>
+			<GlobalVariable id="29" sysVar="MT_DPIX"/>
+			<GlobalVariable id="30" sysVar="MT_DPIY"/>
+			<GlobalVariable id="31" sysVar="MT_Landscape" idxIcon_so="4"/>
+			<GlobalVariable id="32" sysVar="MT_Portrait" idxIcon_so="5"/>
+			<GlobalVariable id="33" sysVar="MT_CanvasX"/>
+			<GlobalVariable id="34" sysVar="MT_CanvasY"/>
+			<GlobalVariable id="35" sysVar="MT_ClientLanguage"/>
+			<GlobalVariable id="36" sysVar="MT_UserName"/>
+			<GlobalVariable id="37" sysVar="MT_UserRoles"/>
+			<GlobalVariable id="38" sysVar="MT_TelephonyAvailable" idxIcon_so="20"/>
+			<GlobalVariable id="39" sysVar="MT_SMSAvailable" idxIcon_so="21"/>
+			<GlobalVariable id="40" sysVar="MT_ButtonTextColor"/>
+			<GlobalVariable id="41" sysVar="MT_ButtonBackgroundColor"/>
+			<GlobalVariable id="42" sysVar="MT_EditFieldTextColor"/>
+			<GlobalVariable id="43" sysVar="MT_EditFieldBackgroundColor"/>
+			<GlobalVariable id="44" sysVar="MT_LabelTextColor"/>
+			<GlobalVariable id="45" sysVar="MT_LabelBackgroundColor"/>
+			<GlobalVariable id="46" sysVar="MT_PageBackgroundColor"/>
+			<GlobalVariable id="47" sysVar="MT_FirstPageLoad"/>
+			<GlobalVariable id="48" sysVar="MT_TargetNode"/>
+			<GlobalVariable id="49" sysVar="MT_ControlKind"/>
+			<GlobalVariable id="50" sysVar="MT_ControlName"/>
+			<GlobalVariable id="51" sysVar="MT_ControlNode"/>
+			<GlobalVariable id="52" sysVar="MT_ControlValue"/>
+			<GlobalVariable id="53" sysVar="MT_ControlValueBeforeChange"/>
+			<GlobalVariable id="54" sysVar="MT_PageName"/>
+			<GlobalVariable id="55" sysVar="MT_SimulationMode"/>
+			<GlobalVariable id="56" sysVar="MT_DBExecute_Result"/>
+			<GlobalVariable id="57" sysVar="MT_CameraAvailable"/>
+			<GlobalVariable id="58" sysVar="MT_GeolocationAvailable"/>
+			<GlobalVariable id="281" name="EmphasizedColor" xpath="IF( IsDarkColor( $MT_PageBackgroundColor ), &apos;#FFFF00&apos;, &apos;#C000C0&apos; )"/>
+			<GlobalVariable id="33344" name="EnforceBackgroundColor" xpath="IF( $MT_iOS, &apos;#FFFFFF&apos; )"/>
+			<GlobalVariable id="33657" name="DamageResolution" xpath="&apos;&apos;, &apos;Y&apos;, &apos;N&apos;"/>
+			<GlobalVariable id="34037" name="Intervals" xpath="if ( $MT_SimulationMode = &apos;designer&apos; ) then 1 else (),
+5, 10, 15, 30"/>
+			<GlobalVariable id="406" sysVar="MT_InputParameters"/>
+			<GlobalVariable id="414" sysVar="MT_HTTPExecute_Result"/>
+			<GlobalVariable id="415" sysVar="MT_ServerConnectionErrorLocation"/>
+			<GlobalVariable id="436" sysVar="MT_IsAppStoreApp"/>
+			<GlobalVariable id="454" sysVar="MT_WindowWidth"/>
+			<GlobalVariable id="455" sysVar="MT_WindowHeight"/>
+			<GlobalVariable id="456" sysVar="MT_AudioChannel"/>
+			<GlobalVariable id="485" sysVar="MT_TableColumnContext"/>
+			<GlobalVariable id="486" sysVar="MT_NFCAvailable"/>
+		</children>
+	</GlobalVariables>
+	<DeployableFiles so="1" id="60">
+		<children>
+			<DeployableFile id="80" deploy="1"/>
+		</children>
+	</DeployableFiles>
+	<CustomerAppSettings so="1" id="409"/>
+	<LocalizableStrings>
+		<LocLangData>
+			<String name="km" text="kilometers"/>
+			<String name="away" text="%1 %2 away from destination"/>
+			<String name="mi" text="miles"/>
+			<String name="sure location" text="Are you sure that you are in the right location?"/>
+			<String name="interrupt delivery" text="This will interrupt current delivery progress!"/>
+			<String name="sure" text="Are you sure?"/>
+			<String name="complete progress" text="Complete delivery process to this customer and proceed with the next destination?"/>
+			<String name="still away" text="You still seem to be %1 %2 away from destination!"/>
+			<String name="delivered_C" text="Personally accepted delivery"/>
+			<String name="delivered_S" text="%1 has accepted delivery"/>
+			<String name="delivered_N" text="Delivery failed"/>
+			<String name="changes lost" text="All changes will be lost!"/>
+			<String name="last delivery" text="This was your last delivery!"/>
+			<String name="view report" text="You can now review your Delivery Report"/>
+			<String name="damage_" text="not damaged"/>
+			<String name="damage_Y" text="small damage - Accepted"/>
+			<String name="damage_N" text="severe damage - Declined"/>
+			<String name="delivered_CP" text="Personally partially accepted delivery"/>
+			<String name="delivered_CR" text="Personally refused delivery"/>
+			<String name="delivered_SP" text="%1 has partially accepted delivery"/>
+			<String name="delivered_SR" text="%1 has refused delivery"/>
+			<String name="todo" text="Below is the list of %1 deliveries for today:"/>
+			<String name="todo remaining" text="There are still %1 remaining deliveries for today!"/>
+			<String name="start" text="Start Delivery!"/>
+			<String name="resume" text="Resume Delivery!"/>
+			<String name="sure skip" text="Are you sure to skip %1and proceed to %2?"/>
+			<String name="proceed todo" text="Proceed to remaining Todo"/>
+			<String name="delivery end" text="Delivery completed!"/>
+			<String name="m" text="meters"/>
+			<String name="ft" text="feet"/>
+			<String name="Every N seconds" text="Every %1 seconds"/>
+			<String name="Every second" text="Every second"/>
+			<String name="Manually" text="Manually"/>
+			<String name="geo slow" text="Retrieving geolocation information is very slow!
+Automatic Geolocation updates will be disabled - please use Update button from now on!"/>
+			<String name="sign to confirm receipt" text=", please sign to confirm receipt."/>
+			<String name="Intro_General" text="It took 1 experienced developer a total of 23 hours to implement this mobile solution for iOS, Android, Windows Phone, Windows 8.x, Windows 10 and HTML5! "/>
+			<String name="Intro_OsLess" text="It took 1 experienced developer a total of 23 hours to implement this mobile solution! "/>
+		</LocLangData>
+		<LocLangData lang="de">
+			<String name="km" text="Kilometer"/>
+			<String name="away" text="%1 %2 vom Ziel entfernt"/>
+			<String name="mi" text="Meilen"/>
+			<String name="sure location" text="Sind Sie sicher, dass Sie sich am richtigen Ort befinden?"/>
+			<String name="interrupt delivery" text="Sie unterbrechen dadurch den aktuellen Zustellvorgang!"/>
+			<String name="sure" text="Sind Sie sicher?"/>
+			<String name="complete progress" text="Zustellung an diesen Kunden fertig stellen und mit dem nächsten Ziel fortfahren?"/>
+			<String name="still away" text="Sie sind offenbar noch %1 %2 weit von Ihrem Ziel entfernt!"/>
+			<String name="delivered_C" text="Hat die Lieferung persönlich entgegengenommen"/>
+			<String name="delivered_S" text="%1 hat die Lieferung entgegengenommen"/>
+			<String name="delivered_N" text="Zustellung fehlgeschlagen"/>
+			<String name="changes lost" text="Alle Änderungen gehen verloren!"/>
+			<String name="last delivery" text="Dies war Ihre letzte Zustelladresse"/>
+			<String name="view report" text="Sie können Ihren Zustellbericht nun anzeigen"/>
+			<String name="damage_" text="nicht beschädigt"/>
+			<String name="damage_Y" text="geringfügig beschädigt - angenommen"/>
+			<String name="damage_N" text="schwer beschädigt - abgewiesen"/>
+			<String name="delivered_CP" text="Hat die Lieferung zum Teil angenommen"/>
+			<String name="delivered_CR" text="Hat die Lieferung persönlich abgewiesen"/>
+			<String name="delivered_SP" text="%1 hat die Lieferung zum Teil angenommen"/>
+			<String name="delivered_SR" text="%1 hat die Lieferung abgewiesen"/>
+			<String name="todo" text="Im Folgenden sehen Sie eine Liste von %1 Zustelladressen für heute:"/>
+			<String name="todo remaining" text="%1 Zustellung(en) ist/sind heute noch ausständig!"/>
+			<String name="start" text="Zustellung starten!"/>
+			<String name="resume" text="Zustellung wieder aufnehmen!"/>
+			<String name="sure skip" text="Möchten Sie %1 wirklich überspringen und mit %2 fortfahren?"/>
+			<String name="proceed todo" text="Weiter mit nächstem To-Do"/>
+			<String name="delivery end" text="Zustellung fertig gestellt"/>
+			<String name="m" text="Meter"/>
+			<String name="ft" text="Fuß"/>
+			<String name="Every N seconds" text="Alle %1 Sekunden"/>
+			<String name="Every second" text="Im Sekundentakt"/>
+			<String name="Manually" text="Manuell"/>
+			<String name="geo slow" text="Der Abruf der Standortinformationen ist sehr langsam! Die automatische Aktualisierung der Standortinformationen wird deaktiviert - verwenden Sie ab jetzt bitte die Schaltfläche &apos;Aktualisieren&apos;."/>
+			<String name="sign to confirm receipt" text=", Empfang bitte mit Unterschrift bestätigen."/>
+			<String name="Intro_General" text="Zur Implementierung dieser mobilen Lösung für iOS, Android, Windows Phone, Windows 8.x, Windows 10 und HTML5 benötigte 1 erfahrener Entwickler insgesamt 23 Stunden! "/>
+			<String name="Intro_OsLess" text="Zur Implementierung dieser mobilen Lösung benötigte 1 erfahrener Entwickler insgesamt 23 Stunden! "/>
+		</LocLangData>
+		<LocLangData lang="ja">
+			<String name="km" text="キロメートル"/>
+			<String name="away" text="目的地から %1 %2　離れています。"/>
+			<String name="mi" text="マイル"/>
+			<String name="sure location" text="正確な場所にいますか?"/>
+			<String name="interrupt delivery" text="現在の配達を中断します。"/>
+			<String name="sure" text="確かですか?"/>
+			<String name="complete progress" text="この顧客への配達を終了して、次の目的地へ進みますか?"/>
+			<String name="still away" text="目的地まで %1 %2 あります。"/>
+			<String name="delivered_C" text="個人的に受け渡し"/>
+			<String name="delivered_S" text="%1 による荷物の受け渡し"/>
+			<String name="delivered_N" text="配達不可能"/>
+			<String name="changes lost" text="全ての変更が失われます!"/>
+			<String name="last delivery" text="これが最後の配達です!"/>
+			<String name="view report" text="配達の報告書を見直すことができます"/>
+			<String name="damage_" text="損傷を受けていません。"/>
+			<String name="damage_Y" text="軽い損傷―受け渡し"/>
+			<String name="damage_N" text="ひどい損傷―受け渡し拒否"/>
+			<String name="delivered_CP" text="部分的な個人的受け渡し"/>
+			<String name="delivered_CR" text="個人的に拒否された受け渡し"/>
+			<String name="delivered_SP" text="%1 による部分的な受け渡し"/>
+			<String name="delivered_SR" text="%1により拒否された受け渡し"/>
+			<String name="todo" text="以下が今日の %1 つの配達リストです:"/>
+			<String name="todo remaining" text="今日の配達はまだ %1 つ残っています !"/>
+			<String name="start" text="配達を開始する!"/>
+			<String name="resume" text="配達を再開する!"/>
+			<String name="sure skip" text="%1 をスキップして  %2に進みますか?"/>
+			<String name="proceed todo" text="残りのやることリストを処理する"/>
+			<String name="delivery end" text="配達が完了しました!"/>
+			<String name="m" text="メートル"/>
+			<String name="ft" text="フィート"/>
+			<String name="Every N seconds" text="毎 %1 秒"/>
+			<String name="Every second" text="毎秒"/>
+			<String name="Manually" text="手動"/>
+			<String name="geo slow" text="位置情報の取得プロセスが遅いです!自動位置情報アップデートが無効化されます。更新ボタンを使用してください。"/>
+			<String name="sign to confirm receipt" text="署名をして受け取りを確認してください。"/>
+			<String name="Intro_General" text="経験豊富なデベロッパー 1 人が 18 時間かけて、この iOS、Android、Windows Phone、Windows 8.x、Windows 10、HTML5 のためのモバイルソリューションを作成しました！"/>
+			<String name="Intro_OsLess" text="経験豊富なデベロッパー 1 人が 18 時間かけて、モバイルソリューションを作成しました！"/>
+		</LocLangData>
+		<LocLangData lang="es">
+			<String name="km" text="Kilómetros"/>
+			<String name="away" text="a %1 %2 del destino"/>
+			<String name="mi" text="millas"/>
+			<String name="sure location" text="¿Está seguro que se encuentra en la ubicación correcta?"/>
+			<String name="interrupt delivery" text="¡Esto interrumpirá el proceso de reparto actual!"/>
+			<String name="sure" text="¿Está seguro?"/>
+			<String name="complete progress" text="¿Completar el proceso de entrega y proceder con el siguiente destino?"/>
+			<String name="still away" text="Parece que usted se encuentra a %1 %2 de su destino"/>
+			<String name="delivered_C" text="Recogida personal del reparto"/>
+			<String name="delivered_S" text="%1 ha aceptado el reparto "/>
+			<String name="delivered_N" text="Se produjo un error en el reparto"/>
+			<String name="changes lost" text="¡Se perderán todos los cambios!"/>
+			<String name="last delivery" text="Este ha sido su último reparto"/>
+			<String name="view report" text="Ahora puede revisar su Informe de Repartos"/>
+			<String name="damage_" text="no dañado"/>
+			<String name="damage_Y" text="daños de poca consideración - aceptado"/>
+			<String name="damage_N" text="daños severos - rechazado"/>
+			<String name="delivered_CP" text="Recogida personal del reparto parcialmente aceptada"/>
+			<String name="delivered_CR" text="Recogida personal del reparto rechazada"/>
+			<String name="delivered_SP" text="%1 ha aceptado el reparto parcialmente"/>
+			<String name="delivered_SR" text="%1 ha rechazado el reparto"/>
+			<String name="todo" text="A continuación se muestra una lista de %1 repartos para el día de hoy:"/>
+			<String name="todo remaining" text="¡Aún debe realizar %1 repartos para el día de hoy!"/>
+			<String name="start" text="Comenzar el reparto"/>
+			<String name="resume" text="Reanudar reparto"/>
+			<String name="sure skip" text="¿Está seguro de que desea saltarse %1 y proceder con %2?"/>
+			<String name="proceed todo" text="Continuar con el resto de tareas"/>
+			<String name="delivery end" text="¡Se ha completado el reparto!"/>
+			<String name="m" text="metro"/>
+			<String name="ft" text="pies"/>
+			<String name="Every N seconds" text="Cada %1 segundos"/>
+			<String name="Every second" text="Cada segundo"/>
+			<String name="Manually" text="Manualmente"/>
+			<String name="geo slow" text="¡La recuperación de información de geolocalización es lenta!
+¡La actualización de geolocalización automática se desactivará. Use el botón Actualizar a partir de ahora!!"/>
+			<String name="sign to confirm receipt" text=", confirme la entrega con su firma."/>
+			<String name="Intro_General" text="¡1 desarrollador experimentado necesitó un total de 18 horas para implementar esta solución móvil en entornos iOS, Android, Windows Phone, Windows 8.x, Windows 10 y HTML5!"/>
+			<String name="Intro_OsLess" text="¡1 desarrollador experimentado necesitó un total de 18 horas para implementar esta solución móvil!"/>
+		</LocLangData>
+		<LocLangData lang="fr">
+			<String name="km" text="kilomètres"/>
+			<String name="away" text="à %1 %2 de la destination"/>
+			<String name="mi" text="miles"/>
+			<String name="sure location" text="Êtes-vous sûr de vous trouver au bon emplacement ?"/>
+			<String name="interrupt delivery" text="Cela interrompra le progrès de la livraison actuelle !"/>
+			<String name="sure" text="Êtes-vous sûr ?"/>
+			<String name="complete progress" text="Achever le processus de livraison avec ce client et poursuivre avec la destination suivante ?"/>
+			<String name="still away" text="Il semblerait que vous vous trouvez à %1 %2 de votre destination !"/>
+			<String name="delivered_C" text="Livraison acceptée personnellement"/>
+			<String name="delivered_S" text="%1 a accepté la livraison"/>
+			<String name="delivered_N" text="Livraison échouée"/>
+			<String name="changes lost" text="Tous les changements seront perdus !"/>
+			<String name="last delivery" text="C&apos;était votre dernière livraison !"/>
+			<String name="view report" text="Vous pouvez maintenant consulter votre rapport de livraison"/>
+			<String name="damage_" text="pas endommagé"/>
+			<String name="damage_Y" text="peu endommagé - Accepté"/>
+			<String name="damage_N" text="très endommagé - Refusé"/>
+			<String name="delivered_CP" text="Livraison acceptée personnellement partiellement"/>
+			<String name="delivered_CR" text="Livraison refusée personnellement"/>
+			<String name="delivered_SP" text="%1 a partiellement accepté la livraison"/>
+			<String name="delivered_SR" text="%1 a refusé la livraison"/>
+			<String name="todo" text="Ci-dessous vous trouverez une liste de %1 livraisons pour aujourd&apos;hui :"/>
+			<String name="todo remaining" text="Il vous reste encore %! livraisons à faire aujourd&apos;hui !"/>
+			<String name="start" text="Démarrer la livraison !"/>
+			<String name="resume" text="Poursuivre la livraison !"/>
+			<String name="sure skip" text="Êtes-vous sûr de sauter %1 et de passer à %2 ?"/>
+			<String name="proceed todo" text="Passez aux tâches restantes"/>
+			<String name="delivery end" text="Livraison achevée !"/>
+			<String name="m" text="mètres"/>
+			<String name="ft" text="pieds"/>
+			<String name="Every N seconds" text="Toutes les %1 secondes"/>
+			<String name="Every second" text="Toutes les secondes"/>
+			<String name="Manually" text="Manuellement"/>
+			<String name="geo slow" text="La récupération des données de géolocalisation est très lente !
+Les mises à jour automatiques seront désactivées - Veuillez à présent utiliser la touche de Mise à jour !"/>
+			<String name="sign to confirm receipt" text=", veuillez signer pour confirmer la réception."/>
+			<String name="Intro_General" text="Il a fallu un total de 23 heures à un développeur expérimenté pour implémenter cette solution mobile pour iOS, Android, Windows Phone, Windows 8.x, Windows 10 et HTML5 ! "/>
+			<String name="Intro_OsLess" text="Il a fallu un total de 23 heures à un développeur expérimenté pour implémenter cette solution mobile ! "/>
+		</LocLangData>
+	</LocalizableStrings>
+	<languages_so lang="de" lang1="es" lang2="ja" lang3="fr"/>
+</MobileTogetherDesign>

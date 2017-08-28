@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MobileTogetherDesign versionClient="55" versionServer="55" deploymentPath_so="/public/Text to Speech Demo" deploymentDescription_so="Simple Text-to-Speech demo app" deploymentGlobalResourceConfig_so="Default">
+	<DesignRoot id="6" isNeedsTextToSpeech="1">
+		<children>
+			<DesignPage id="7">
+				<style name="Speak User Text"/>
+				<children>
+					<DesignTable id="291">
+						<style name="Table2"/>
+						<children>
+							<DesignTableCol id="292"/>
+							<DesignTableCol id="293"/>
+							<DesignTableCol id="294"/>
+							<DesignTableRow id="295">
+								<children>
+									<DesignButton id="296">
+										<style align="center" backgroundColor_x="if ( $MT_iOS ) then $MT_EditFieldBackgroundColor else $MT_ButtonBackgroundColor" margin="5px" name="Button1" text="Speak" weight="1"/>
+										<localization so="1">
+											<children>
+												<LocLangData lang="fr">
+													<style text="Parler"/>
+												</LocLangData>
+												<LocLangData lang="es">
+													<style text="Hablar"/>
+												</LocLangData>
+												<LocLangData lang="de">
+													<style text="Sprechen"/>
+												</LocLangData>
+												<LocLangData lang="en-US">
+													<style text="Speak"/>
+												</LocLangData>
+											</children>
+										</localization>
+										<controlActions id="297">
+											<children>
+												<DesignActionHideKeyboard id="300"/>
+												<DesignActionCondition id="301" condition="$PERSISTENT/Root/workingText = &apos;&apos;">
+													<children>
+														<DesignActionConditionTrue id="302">
+															<children>
+																<DesignActionTextToSpeech id="303" speechText="$PERSISTENT/Root/defaultMsg"/>
+															</children>
+														</DesignActionConditionTrue>
+														<DesignActionConditionFalse id="304">
+															<children>
+																<DesignActionTextToSpeech id="305" speechText="$PERSISTENT/Root/workingText"/>
+															</children>
+														</DesignActionConditionFalse>
+													</children>
+												</DesignActionCondition>
+											</children>
+										</controlActions>
+									</DesignButton>
+									<DesignButton id="306">
+										<style align="center" backgroundColor_x="if ( $MT_iOS ) then $MT_EditFieldBackgroundColor else $MT_ButtonBackgroundColor" margin="5px" name="Button2" text="Silence" weight="1"/>
+										<localization so="1">
+											<children>
+												<LocLangData lang="es">
+													<style text="Silencio"/>
+												</LocLangData>
+												<LocLangData lang="fr">
+													<style text="Silence"/>
+												</LocLangData>
+												<LocLangData lang="de">
+													<style text="Schweigen"/>
+												</LocLangData>
+												<LocLangData lang="en-US">
+													<style text="Silence"/>
+												</LocLangData>
+											</children>
+										</localization>
+										<controlActions id="307">
+											<children>
+												<DesignActionTextToSpeech id="310" op="Stop"/>
+											</children>
+										</controlActions>
+									</DesignButton>
+									<DesignButton id="311">
+										<style align="center" backgroundColor_x="if ( $MT_iOS ) then $MT_EditFieldBackgroundColor else $MT_ButtonBackgroundColor" margin="5px" name="Button3" text="Exit" weight="1"/>
+										<localization so="1">
+											<children>
+												<LocLangData lang="es">
+													<style text="Salido"/>
+												</LocLangData>
+												<LocLangData lang="fr">
+													<style text="Sortie"/>
+												</LocLangData>
+												<LocLangData lang="de">
+													<style text="Ausgang"/>
+												</LocLangData>
+												<LocLangData lang="en-US">
+													<style text="Exit"/>
+												</LocLangData>
+											</children>
+										</localization>
+										<controlActions id="312">
+											<children>
+												<DesignActionGroupRef id="315" groupRef="252"/>
+											</children>
+										</controlActions>
+									</DesignButton>
+								</children>
+							</DesignTableRow>
+						</children>
+					</DesignTable>
+					<DesignLabel id="213">
+						<style align="center" margin="20px" name="Label1" text="Enter Text:" weight="1"/>
+						<localization so="1">
+							<children>
+								<LocLangData lang="es">
+									<style text="Ingrese texto:"/>
+								</LocLangData>
+								<LocLangData lang="fr">
+									<style text="Entrez du texte:"/>
+								</LocLangData>
+								<LocLangData lang="de">
+									<style text="Text eingeben:"/>
+								</LocLangData>
+								<LocLangData lang="en-US">
+									<style text="Enter Text:"/>
+								</LocLangData>
+							</children>
+						</localization>
+					</DesignLabel>
+					<DesignEditField id="207" pageXML="225">
+						<style keyboard="Text" marginBottom="10px" marginLeft="20px" marginRight="20px" multiLine="1" name="Edit Field1"/>
+					</DesignEditField>
+					<DesignButton id="318">
+						<style align="center" backgroundColor_x="if ( $MT_iOS ) then $MT_EditFieldBackgroundColor else $MT_ButtonBackgroundColor" margin="5px" name="Button4" text="Scroll to top" visible_x="string-length($PERSISTENT/Root/workingText) &gt; 100" weight="1"/>
+						<localization so="1">
+							<children>
+								<LocLangData lang="es">
+									<style text="Vuelve al comienzo"/>
+								</LocLangData>
+								<LocLangData lang="fr">
+									<style text="Parcourez le sommet"/>
+								</LocLangData>
+								<LocLangData lang="de">
+									<style text="Scrolle nach oben"/>
+								</LocLangData>
+								<LocLangData lang="en-US">
+									<style text="Scroll to top"/>
+								</LocLangData>
+							</children>
+						</localization>
+						<controlActions id="319">
+							<children>
+								<DesignActionScrollTo id="323" scrolltoTarget="top" subject="page"/>
+							</children>
+						</controlActions>
+					</DesignButton>
+				</children>
+				<onPageLoadActions id="14">
+					<children>
+						<DesignActionGroupRef id="258" groupRef="253"/>
+						<DesignActionUpdateNode id="324" updAt="$PERSISTENT/Root/workingText" resOf="&apos;Four score and seven years ago our fathers brought forth on this continent, a new nation, conceived in Liberty, and dedicated to the proposition that all men are created equal.
+
+Now we are engaged in a great civil war, testing whether that nation, or any nation so conceived and so dedicated, can long endure. We are met on a great battle-field of that war. We have come to dedicate a portion of that field, as a final resting place for those who here gave their lives that that nation might live. It is altogether fitting and proper that we should do this.
+
+But, in a larger sense, we can not dedicate - we can not consecrate - we can not hallow - this ground. The brave men, living and dead, who struggled here, have consecrated it, far above our poor power to add or detract. The world will little note, nor long remember what we say here, but it can never forget what they did here. It is for us the living, rather, to be dedicated here to the unfinished work which they who fought here have thus far so nobly advanced. It is rather for us to be here dedicated to the great task remaining before us - that from these honored dead we take increased devotion to that cause for which they gave the last full measure of devotion - that we here highly resolve that these dead shall not have died in vain - that this nation, under God, shall have a new birth of freedom - and that government of the people, by the people, for the people, shall not perish from the earth.
+&apos;"/>
+						<DesignActionScrollTo id="325" scrolltoTarget="top" subject="page"/>
+						<DesignActionHideKeyboard id="241"/>
+					</children>
+				</onPageLoadActions>
+				<onBackButtonActions id="17">
+					<children>
+						<DesignActionGroupRef id="251" groupRef="252"/>
+					</children>
+				</onBackButtonActions>
+			</DesignPage>
+		</children>
+	</DesignRoot>
+	<ActionGroupRoot id="55">
+		<children>
+			<DesignActionGroup id="253" name="Load localized messages">
+				<children>
+					<DesignActionUpdateNode id="254" updAt="$PERSISTENT/Root/defaultMsg" resOf="mt-load-string(&apos;default_message&apos;)"/>
+					<DesignActionUpdateNode id="255" updAt="$PERSISTENT/Root/closeMsg" resOf="mt-load-string(&apos;close_message&apos;)"/>
+					<DesignActionUpdateNode id="256" updAt="$PERSISTENT/Root/goodbyeMsg" resOf="mt-load-string(&apos;goodbye_message&apos;)"/>
+				</children>
+			</DesignActionGroup>
+			<DesignActionGroup id="252" name="Close App">
+				<children>
+					<DesignActionTextToSpeech id="244" speechText="$PERSISTENT/Root/closeMsg"/>
+					<DesignActionMessageBox id="245" msgBoxKind="okcancel" msgBoxTitle="&apos;Close APP&apos;" msgBoxMsg="concat($PERSISTENT/Root/closeMsg, &apos;?&apos;)">
+						<children>
+							<DesignActionMessageBoxButton id="246">
+								<children>
+									<DesignActionTextToSpeech id="247" speechText="$PERSISTENT/Root/goodbyeMsg"/>
+									<DesignActionLoop id="316" needsClient="1" needsClientView="1" breakLoopIf="mt-text-to-speech-is-speaking() = false()">
+										<children>
+											<DesignActionUpdateNode id="317" updAt="$PERSISTENT/Root" resOf="sleep(100)"/>
+										</children>
+									</DesignActionLoop>
+									<DesignActionWorkflowExecution id="275" cancel="1"/>
+								</children>
+							</DesignActionMessageBoxButton>
+							<DesignActionMessageBoxButton id="249"/>
+						</children>
+					</DesignActionMessageBox>
+				</children>
+			</DesignActionGroup>
+		</children>
+	</ActionGroupRoot>
+	<PageXMLNamespaceRoot id="61">
+		<children>
+			<PageXMLNamespace id="62" defNS="1"/>
+		</children>
+	</PageXMLNamespaceRoot>
+	<PageXMLPersistentRoot id="63" name="PERSISTENT">
+		<children>
+			<PageXMLElement id="64" name="Root">
+				<children>
+					<PageXMLElement id="225" name="workingText" mustExist="1" default="Four score and seven years ago our fathers brought forth on this continent, a new nation, conceived in Liberty, and dedicated to the proposition that all men are created equal.
+					
+Now we are engaged in a great civil war, testing whether that nation, or any nation so conceived and so dedicated, can long endure. We are met on a great battle-field of that war. We have come to dedicate a portion of that field, as a final resting place for those who here gave their lives that that nation might live. It is altogether fitting and proper that we should do this.
+
+But, in a larger sense, we can not dedicate - we can not consecrate - we can not hallow - this ground. The brave men, living and dead, who struggled here, have consecrated it, far above our poor power to add or detract. The world will little note, nor long remember what we say here, but it can never forget what they did here. It is for us the living, rather, to be dedicated here to the unfinished work which they who fought here have thus far so nobly advanced. It is rather for us to be here dedicated to the great task remaining before us - that from these honored dead we take increased devotion to that cause for which they gave the last full measure of devotion - that we here highly resolve that these dead shall not have died in vain - that this nation, under God, shall have a new birth of freedom - and that government of the people, by the people, for the people, shall not perish from the earth.
+"/>
+					<PageXMLElement id="238" name="defaultMsg" mustExist="1" default="I do not have anything to say"/>
+					<PageXMLElement id="231" name="closeMsg" mustExist="1" default="Are you sure you want to close this app"/>
+					<PageXMLElement id="257" name="goodbyeMsg" mustExist="1" default="Okay goodbye"/>
+				</children>
+			</PageXMLElement>
+		</children>
+	</PageXMLPersistentRoot>
+	<WorkflowRoot id="57">
+		<children>
+			<WorkflowPageRef id="58" page="7"/>
+		</children>
+	</WorkflowRoot>
+	<GlobalVariables id="65">
+		<children>
+			<GlobalVariable id="66" sysVar="MT_Android" idxIcon_so="0"/>
+			<GlobalVariable id="67" sysVar="MT_iOS" idxIcon_so="1"/>
+			<GlobalVariable id="68" sysVar="MT_Browser" idxIcon_so="2"/>
+			<GlobalVariable id="69" sysVar="MT_iPad" idxIcon_so="3"/>
+			<GlobalVariable id="70" sysVar="MT_Windows" idxIcon_so="6"/>
+			<GlobalVariable id="71" sysVar="MT_WindowsPhone" idxIcon_so="7"/>
+			<GlobalVariable id="72" sysVar="MT_DeviceWidth"/>
+			<GlobalVariable id="73" sysVar="MT_DeviceHeight"/>
+			<GlobalVariable id="74" sysVar="MT_DPIX"/>
+			<GlobalVariable id="75" sysVar="MT_DPIY"/>
+			<GlobalVariable id="76" sysVar="MT_Landscape" idxIcon_so="4"/>
+			<GlobalVariable id="77" sysVar="MT_Portrait" idxIcon_so="5"/>
+			<GlobalVariable id="78" sysVar="MT_CanvasX"/>
+			<GlobalVariable id="79" sysVar="MT_CanvasY"/>
+			<GlobalVariable id="80" sysVar="MT_ClientLanguage"/>
+			<GlobalVariable id="81" sysVar="MT_TelephonyAvailable" idxIcon_so="20"/>
+			<GlobalVariable id="82" sysVar="MT_SMSAvailable" idxIcon_so="21"/>
+			<GlobalVariable id="83" sysVar="MT_ButtonTextColor"/>
+			<GlobalVariable id="84" sysVar="MT_ButtonBackgroundColor"/>
+			<GlobalVariable id="85" sysVar="MT_EditFieldTextColor"/>
+			<GlobalVariable id="86" sysVar="MT_EditFieldBackgroundColor"/>
+			<GlobalVariable id="87" sysVar="MT_LabelTextColor"/>
+			<GlobalVariable id="88" sysVar="MT_LabelBackgroundColor"/>
+			<GlobalVariable id="89" sysVar="MT_PageBackgroundColor"/>
+			<GlobalVariable id="90" sysVar="MT_FirstPageLoad"/>
+			<GlobalVariable id="91" sysVar="MT_TargetNode"/>
+			<GlobalVariable id="92" sysVar="MT_ControlKind"/>
+			<GlobalVariable id="93" sysVar="MT_ControlName"/>
+			<GlobalVariable id="94" sysVar="MT_ControlNode"/>
+			<GlobalVariable id="95" sysVar="MT_PageName"/>
+			<GlobalVariable id="96" sysVar="MT_UserName"/>
+			<GlobalVariable id="97" sysVar="MT_UserRoles"/>
+			<GlobalVariable id="98" sysVar="MT_ControlValue"/>
+			<GlobalVariable id="99" sysVar="MT_ControlValueBeforeChange"/>
+			<GlobalVariable id="100" sysVar="MT_SimulationMode"/>
+			<GlobalVariable id="101" sysVar="MT_DBExecute_Result"/>
+			<GlobalVariable id="102" sysVar="MT_CameraAvailable"/>
+			<GlobalVariable id="103" sysVar="MT_GeolocationAvailable"/>
+			<GlobalVariable id="104" sysVar="MT_InputParameters"/>
+			<GlobalVariable id="105" sysVar="MT_HTTPExecute_Result"/>
+			<GlobalVariable id="106" sysVar="MT_ServerConnectionErrorLocation"/>
+			<GlobalVariable id="107" sysVar="MT_IsAppStoreApp"/>
+			<GlobalVariable id="108" sysVar="MT_WindowWidth"/>
+			<GlobalVariable id="109" sysVar="MT_WindowHeight"/>
+			<GlobalVariable id="110" sysVar="MT_AudioChannel"/>
+			<GlobalVariable id="111" sysVar="MT_TableColumnContext"/>
+			<GlobalVariable id="112" sysVar="MT_NFCAvailable"/>
+		</children>
+	</GlobalVariables>
+	<CustomerAppSettings so="1" id="56"/>
+	<LocalizableStrings>
+		<LocLangData>
+			<String name="default_message" text="I do not have anything to say"/>
+			<String name="close_message" text="Are you sure you want to quit this app"/>
+			<String name="goodbye_message" text="Okay, goodbye"/>
+		</LocLangData>
+		<LocLangData lang="en">
+			<String name="default_message" text="I do not have anything to say"/>
+			<String name="close_message" text="Are you sure you want to quit this app"/>
+			<String name="goodbye_message" text="Okay, goodbye"/>
+		</LocLangData>
+		<LocLangData lang="es">
+			<String name="default_message" text="No tengo nada que decir"/>
+			<String name="close_message" text="¿Seguro que quieres salir de esta aplicación"/>
+			<String name="goodbye_message" text="Vale adios"/>
+		</LocLangData>
+		<LocLangData lang="fr">
+			<String name="default_message" text="Je n&apos;ai rien à dire"/>
+			<String name="close_message" text="Êtes-vous sûr de vouloir quitter cette application"/>
+			<String name="goodbye_message" text="D&apos;accord, au revoir"/>
+		</LocLangData>
+		<LocLangData lang="de">
+			<String name="default_message" text="Ich habe nichts zu sagen"/>
+			<String name="close_message" text="Sind Sie sicher, dass Sie diese App beenden möchten"/>
+			<String name="goodbye_message" text="Okay auf Wiedersehen"/>
+		</LocLangData>
+	</LocalizableStrings>
+	<languages_so lang="en-US" lang1="de" lang2="fr" lang3="es"/>
+</MobileTogetherDesign>
